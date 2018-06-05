@@ -1,0 +1,5161 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://betamasaheft.eu/"
+     xml:base="http://betamasaheft.eu/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://betamasaheft.eu/">
+        <dc:title>Beta Maṣāḥǝft</dc:title>
+        <dc:language>en</dc:language>
+        <dc:language>fr</dc:language>
+        <dc:description>The present ontology describes the structure of information in the RDF annotations
+        exported from TEI files of the Beta Maṣāḥǝft project.</dc:description>
+        <rdfs:label>Beta Maṣāḥǝft</rdfs:label>
+        <rdfs:isDefinedBy>Beta Maṣāḥǝft</rdfs:isDefinedBy>
+        <dc:creator>Pietro Maria Liuzzo</dc:creator>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- #constituteUnit -->
+
+    <owl:ObjectProperty rdf:about="http://Synthax.du.Codex/ontology#constituteUnit">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+        <rdfs:range rdf:resource="http://Synthax.du.Codex/ontology#UniProd"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #containsUnits -->
+
+    <owl:ObjectProperty rdf:about="http://Synthax.du.Codex/ontology#containsUnits">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#UniCirc"/>
+        <rdfs:range rdf:resource="http://Synthax.du.Codex/ontology#UniProd"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #hasLocus -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasLocus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Locus"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #hasTransformationModel -->
+
+    <owl:ObjectProperty rdf:about="http://Synthax.du.Codex/ontology#hasTransformationModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#UniProd"/>
+        <rdfs:range rdf:resource="http://Synthax.du.Codex/ontology#Transformation"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #hasUnitModel -->
+
+    <owl:ObjectProperty rdf:about="http://Synthax.du.Codex/ontology#hasUnitModel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+        <rdfs:range rdf:resource="http://Synthax.du.Codex/ontology#Modele"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #hastransformationpart -->
+
+    <owl:ObjectProperty rdf:about="http://Synthax.du.Codex/ontology#hastransformationpart">
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#Multiples"/>
+        <rdfs:range rdf:resource="http://Synthax.du.Codex/ontology#Simple"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #produces -->
+
+    <owl:ObjectProperty rdf:about="http://Synthax.du.Codex/ontology#produces">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#Transformation"/>
+        <rdfs:range rdf:resource="http://Synthax.du.Codex/ontology#UniCirc"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #undergoesTransformation -->
+
+    <owl:ObjectProperty rdf:about="http://Synthax.du.Codex/ontology#undergoesTransformation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#UniProd"/>
+        <rdfs:range rdf:resource="http://Synthax.du.Codex/ontology#Transformation"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #geo:location -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/geo:location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #skos:broadMatch -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#skos:broadMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #skos:closeMatch -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#skos:closeMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- #skos:exactMatch -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#skos:exactMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://betamasaheft.eu/husbandOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/husbandOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://betamasaheft.eu/ordainedBy -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/ordainedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://betamasaheft.eu/wifeOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/wifeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/ins"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/place"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://data.snapdrgn.net/ontology/snap#AllianceWith -->
+
+    <owl:ObjectProperty rdf:about="http://data.snapdrgn.net/ontology/snap#AllianceWith">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://data.snapdrgn.net/ontology/snap#FatherOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.snapdrgn.net/ontology/snap#FatherOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://data.snapdrgn.net/ontology/snap#SonOf -->
+
+    <owl:ObjectProperty rdf:about="http://data.snapdrgn.net/ontology/snap#SonOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/CLP46i_may_form_part_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/CLP46i_may_form_part_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P129_is_about -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P129_is_about">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P129i_is_subject_of"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/ins"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/place"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://erlangen-crm.org/current/P129i_is_subject_of -->
+
+    <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P129i_is_subject_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://lawd.info/ontology/hasAttestation -->
+
+    <owl:ObjectProperty rdf:about="http://lawd.info/ontology/hasAttestation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://lawd.info/ontology/hasName -->
+
+    <owl:ObjectProperty rdf:about="http://lawd.info/ontology/hasName">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/relation">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/source">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/creator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/dc/terms/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/hasPart">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/msfrag"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/msitem"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mspart"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/addition"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/binding"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/decoration"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/hand"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/layout"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/msfrag"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/msitem"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/mspart"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/quire"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#contains -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#contains">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#follows -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#follows">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#formsPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#formsPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#hasOwned -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#hasOwned">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#isAncestorOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#isAncestorOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#isAttributedToAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#isAttributedToAuthor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#isCopierOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#isCopierOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#isDifferentTo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#isDifferentTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#isDirectCopyOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#isDirectCopyOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#isRelatedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#isShorterVersionOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#isShorterVersionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/saws/ontology#isVersionInAnotherLanguageOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/saws/ontology#isVersionInAnotherLanguageOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://purl.org/vocab/relationship/rel:enemyOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/relationship/rel:enemyOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://syriaca.org/documentation/relations.html#has-relation-to-place -->
+
+    <owl:ObjectProperty rdf:about="http://syriaca.org/documentation/relations.html#has-relation-to-place">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/place"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/msfrag"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mspart"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/binding"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/msfrag"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mspart"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/binding"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/msfrag"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mspart"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P48_has_preferred_identifier -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P48_has_preferred_identifier">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span">
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#UniCirc"/>
+        <rdfs:domain rdf:resource="http://Synthax.du.Codex/ontology#UniProd"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/ins"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#type -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/addition"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/auth"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/ins"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/nar"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/place"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/MScomponents"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Additiones"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Chant_Modes"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Confessions"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Feasts"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Occupation"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Periods"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Place_types"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Subjects"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/auth"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/ins"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/nar"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/place"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/special_mss"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#subClassOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#subClassOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.w3.org/ns/oa#hasBody -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasBody">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/auth"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/ins"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/nar"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/place"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://www.w3.org/ns/oa#hasTarget -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/oa#hasTarget">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/ins"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/place"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/primaryTopicOff -->
+
+    <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopicOff">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- #hasTotalLeaves -->
+
+    <owl:DatatypeProperty rdf:about="http://betamasaheft.eu/hasTotalLeaves">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- #locusFrom -->
+
+    <owl:DatatypeProperty rdf:about="http://betamasaheft.eu/locusFrom">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Locus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- #locusLine -->
+
+    <owl:DatatypeProperty rdf:about="http://betamasaheft.eu/locusLine">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Locus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- #locusTarget -->
+
+    <owl:DatatypeProperty rdf:about="http://betamasaheft.eu/locusTarget">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Locus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- #locusTo -->
+
+    <owl:DatatypeProperty rdf:about="http://betamasaheft.eu/locusTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Locus"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://lawd.info/ontology/primaryForm -->
+
+    <owl:DatatypeProperty rdf:about="http://lawd.info/ontology/primaryForm">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://lawd.info/ontology/variantForm -->
+
+    <owl:DatatypeProperty rdf:about="http://lawd.info/ontology/variantForm">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/contributor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/format -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/format">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/identifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/language">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/publisher">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/source">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P2_has_type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P2_has_type">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts -->
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/msfrag"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/msitem"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mspart"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by -->
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by -->
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P79_end_is_qualified_by -->
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P79_end_is_qualified_by">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P90_has_value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P90_has_value">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P91_has_unit -->
+
+    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P91_has_unit">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://www.w3.org/ns/oa#annotatedAt -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/oa#annotatedAt">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/homepage -->
+
+    <owl:DatatypeProperty rdf:about="http://xmlns.com/foaf/0.1/homepage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- #A1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#A1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Accroissement"/>
+    </owl:Class>
+
+
+
+    <!-- #A2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#A2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Accroissement"/>
+    </owl:Class>
+
+
+
+    <!-- #A3 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#A3">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Accroissement"/>
+    </owl:Class>
+
+
+
+    <!-- #A4 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#A4">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Accroissement"/>
+    </owl:Class>
+
+
+
+    <!-- #Accroissement -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Accroissement">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Simple"/>
+        <owl:disjointWith rdf:resource="http://Synthax.du.Codex/ontology#Decroissement"/>
+    </owl:Class>
+
+
+
+    <!-- #Cah1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Cah1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleCah"/>
+    </owl:Class>
+
+
+
+    <!-- #Cah2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Cah2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleCah"/>
+    </owl:Class>
+
+
+
+    <!-- #Cah3 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Cah3">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleCah"/>
+    </owl:Class>
+
+
+
+    <!-- #Cah4 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Cah4">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleCah"/>
+    </owl:Class>
+
+
+
+    <!-- #Colophon -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Colophon">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
+    </owl:Class>
+
+
+
+    <!-- #Cont1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Cont1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleCont"/>
+    </owl:Class>
+
+
+
+    <!-- #Cont2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Cont2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleCont"/>
+    </owl:Class>
+
+
+
+    <!-- #Cont3 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Cont3">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleCont"/>
+    </owl:Class>
+
+
+
+    <!-- #Cont4 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Cont4">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleCont"/>
+    </owl:Class>
+
+
+
+    <!-- #Cont5 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Cont5">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleCont"/>
+    </owl:Class>
+
+
+
+    <!-- #D1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#D1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Decroissement"/>
+    </owl:Class>
+
+
+
+    <!-- #D2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#D2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Decroissement"/>
+    </owl:Class>
+
+
+
+    <!-- #D3 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#D3">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Decroissement"/>
+    </owl:Class>
+
+
+
+    <!-- #Decroissement -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Decroissement">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Simple"/>
+    </owl:Class>
+
+
+
+    <!-- #Discontinuite -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Discontinuite"/>
+
+
+
+    <!-- #Ecri1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Ecri1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleEcri"/>
+    </owl:Class>
+
+
+
+    <!-- #Ecri2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Ecri2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleEcri"/>
+    </owl:Class>
+
+
+
+    <!-- #Ecri3 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Ecri3">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleEcri"/>
+    </owl:Class>
+
+
+
+    <!-- #Ecri4 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Ecri4">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleEcri"/>
+    </owl:Class>
+
+
+
+    <!-- #Ecri5 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Ecri5">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleEcri"/>
+    </owl:Class>
+
+
+
+    <!-- #Ecri6 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Ecri6">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleEcri"/>
+    </owl:Class>
+
+
+
+    <!-- #ElMat -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#ElMat">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#UniMat"/>
+    </owl:Class>
+
+
+
+    <!-- #Locus -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Locus"/>
+
+
+
+    <!-- #MA1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#MA1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#MutilationAjout"/>
+    </owl:Class>
+
+
+
+    <!-- #MA2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#MA2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#MutilationAjout"/>
+    </owl:Class>
+
+
+
+    <!-- #MA3 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#MA3">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#MutilationAjout"/>
+    </owl:Class>
+
+
+
+    <!-- #MA4 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#MA4">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#MutilationAjout"/>
+    </owl:Class>
+
+
+
+    <!-- #MScomponents -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/MScomponents"/>
+
+
+
+    <!-- #Main1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Main1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMain"/>
+        <owl:disjointWith rdf:resource="http://Synthax.du.Codex/ontology#Main2"/>
+    </owl:Class>
+
+
+
+    <!-- #Main2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Main2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMain"/>
+    </owl:Class>
+
+
+
+    <!-- #Mat1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Mat1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMat"/>
+    </owl:Class>
+
+
+
+    <!-- #Mat2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Mat2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMat"/>
+    </owl:Class>
+
+
+
+    <!-- #Mat3 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Mat3">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMat"/>
+    </owl:Class>
+
+
+
+    <!-- #Mat4 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Mat4">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMat"/>
+    </owl:Class>
+
+
+
+    <!-- #Mat5 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Mat5">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMat"/>
+    </owl:Class>
+
+
+
+    <!-- #Mep1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Mep1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMeP"/>
+    </owl:Class>
+
+
+
+    <!-- #Mep2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Mep2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMeP"/>
+    </owl:Class>
+
+
+
+    <!-- #Mep3 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Mep3">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMeP"/>
+    </owl:Class>
+
+
+
+    <!-- #Mep4 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Mep4">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMeP"/>
+    </owl:Class>
+
+
+
+    <!-- #Mep5 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Mep5">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleMeP"/>
+    </owl:Class>
+
+
+
+    <!-- #Modele -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Modele"/>
+
+
+
+    <!-- #ModeleCah -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#ModeleCah">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Modele"/>
+    </owl:Class>
+
+
+
+    <!-- #ModeleCont -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#ModeleCont">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Modele"/>
+    </owl:Class>
+
+
+
+    <!-- #ModeleEcri -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#ModeleEcri">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Modele"/>
+    </owl:Class>
+
+
+
+    <!-- #ModeleMain -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#ModeleMain">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Modele"/>
+    </owl:Class>
+
+
+
+    <!-- #ModeleMarq -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#ModeleMarq">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Modele"/>
+    </owl:Class>
+
+
+
+    <!-- #ModeleMat -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#ModeleMat">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Modele"/>
+    </owl:Class>
+
+
+
+    <!-- #ModeleMeP -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#ModeleMeP">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Modele"/>
+    </owl:Class>
+
+
+
+    <!-- #ModeleRegl -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#ModeleRegl">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Modele"/>
+    </owl:Class>
+
+
+
+    <!-- #Multiples -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Multiples">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Transformation"/>
+        <owl:disjointWith rdf:resource="http://Synthax.du.Codex/ontology#Simple"/>
+    </owl:Class>
+
+
+
+    <!-- #MutilationAjout -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#MutilationAjout">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Multiples"/>
+    </owl:Class>
+
+
+
+    <!-- #P1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#P1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Permutation"/>
+    </owl:Class>
+
+
+
+    <!-- #Permutation -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Permutation">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Multiples"/>
+    </owl:Class>
+
+
+
+    <!-- #R1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#R1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Remplacement"/>
+    </owl:Class>
+
+
+
+    <!-- #R2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#R2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Remplacement"/>
+    </owl:Class>
+
+
+
+    <!-- #R3 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#R3">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Remplacement"/>
+    </owl:Class>
+
+
+
+    <!-- #Regl1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Regl1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleRegl"/>
+    </owl:Class>
+
+
+
+    <!-- #Regl2 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Regl2">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleRegl"/>
+    </owl:Class>
+
+
+
+    <!-- #Regl3 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Regl3">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#ModeleRegl"/>
+    </owl:Class>
+
+
+
+    <!-- #Remplacement -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Remplacement">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Multiples"/>
+    </owl:Class>
+
+
+
+    <!-- #Restauration -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Restauration">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Multiples"/>
+    </owl:Class>
+
+
+
+    <!-- #Simple -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Simple">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Transformation"/>
+    </owl:Class>
+
+
+
+    <!-- #Transformation -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#Transformation"/>
+
+
+
+    <!-- #UA1 -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UA1">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#UnionAjout"/>
+    </owl:Class>
+
+
+
+    <!-- #UniCah -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniCah">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+    </owl:Class>
+
+
+
+    <!-- #UniCirc -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniCirc"/>
+
+
+
+    <!-- #UniCont -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniCont">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+    </owl:Class>
+
+
+
+    <!-- #UniEcri -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniEcri">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+    </owl:Class>
+
+
+
+    <!-- #UniMain -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniMain">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+    </owl:Class>
+
+
+
+    <!-- #UniMarq -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniMarq">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+    </owl:Class>
+
+
+
+    <!-- #UniMat -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniMat">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+    </owl:Class>
+
+
+
+    <!-- #UniMeP -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniMeP">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+    </owl:Class>
+
+
+
+    <!-- #UniProd -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniProd"/>
+
+
+
+    <!-- #UniProd-C -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniProd-C">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#UniProd"/>
+    </owl:Class>
+
+
+
+    <!-- #UniProd-C-MC -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniProd-C-MC">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#UniProd"/>
+    </owl:Class>
+
+
+
+    <!-- #UniProd-M -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniProd-M">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#UniProd"/>
+    </owl:Class>
+
+
+
+    <!-- #UniProd-MC -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniProd-MC">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#UniProd"/>
+    </owl:Class>
+
+
+
+    <!-- #UniRegl -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UniRegl">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Discontinuite"/>
+    </owl:Class>
+
+
+
+    <!-- #UnionAjout -->
+
+    <owl:Class rdf:about="http://Synthax.du.Codex/ontology#UnionAjout">
+        <rdfs:subClassOf rdf:resource="http://Synthax.du.Codex/ontology#Multiples"/>
+    </owl:Class>
+
+
+
+    <!-- #addition -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/addition">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
+    </owl:Class>
+
+
+
+    <!-- #binding -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/binding">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
+    </owl:Class>
+
+
+
+    <!-- #decoration -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/decoration">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
+    </owl:Class>
+
+
+
+    <!-- #hand -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/hand">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
+    </owl:Class>
+
+
+
+    <!-- #layout -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/layout">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
+    </owl:Class>
+
+
+
+    <!-- #msfrag -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/msfrag">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
+    </owl:Class>
+
+
+
+    <!-- #msitem -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/msitem">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
+    </owl:Class>
+
+
+
+    <!-- #mspart -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/mspart">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
+    </owl:Class>
+
+
+
+    <!-- #quire -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/quire">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1001Agony -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1001Agony">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1002Announciation -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1002Announciation">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1003Arrest -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1003Arrest">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1004Bitter -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1004Bitter">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1005Crucifixion -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1005Crucifixion">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1006Denial -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1006Denial">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1007Deposition -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1007Deposition">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1008Descent -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1008Descent">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1009Doubting -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1009Doubting">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1010Entombment -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1010Entombment">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1011Entry -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1011Entry">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1012Equestrian -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1012Equestrian">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1013EvaPortrait -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1013EvaPortrait">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1014Evangelists -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1014Evangelists">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1015Flagellation -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1015Flagellation">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1016Flight -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1016Flight">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1017WomenAtTomb -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1017WomenAtTomb">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1018JBefPilate -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1018JBefPilate">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1019Cana -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1019Cana">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1020Massacre -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1020Massacre">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1021MiraclesOfJesus -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1021MiraclesOfJesus">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1022MiraclesOfMary -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1022MiraclesOfMary">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1023Mocking -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1023Mocking">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1024MosesLaw -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1024MosesLaw">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1025NativityJesus -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1025NativityJesus">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1026NativityMary -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1026NativityMary">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1027PresentationJesus -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1027PresentationJesus">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1028HebrewsFurnace -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1028HebrewsFurnace">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1029Transfiguration -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1029Transfiguration">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1030Trinity -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1030Trinity">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1031VirginAndChild -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1031VirginAndChild">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1032Washing -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1032Washing">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1033Ascension -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1033Ascension">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1033Maiestas -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1033Maiestas">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1034Tempietto -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1034Tempietto">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1035HolyMan -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1035HolyMan">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AT1036MercyCovenant -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AT1036MercyCovenant">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AbrehawaAsbeha -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AbrehawaAsbeha">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AcquisitionNote -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AcquisitionNote">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Additiones -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Additiones"/>
+
+
+
+    <!-- http://betamasaheft.eu/Admonition -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Admonition">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Advent -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Advent">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Aks -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Aks">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Aksumite -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Aksumite">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AksumiteStyle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AksumiteStyle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Amanuel -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Amanuel">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/AmharicLiterature -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/AmharicLiterature">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Anglican -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Anglican">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Apocrypha -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Apocrypha">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ApocryphaPseudoepigrapha -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ApocryphaPseudoepigrapha">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Arafa -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Arafa">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ArarayMode -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ArarayMode">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Chant_Modes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Armenian -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Armenian">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Orthodox"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Art_Keywords -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Art_Keywords"/>
+
+
+
+    <!-- http://betamasaheft.eu/Art_Themes -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Art_Themes"/>
+
+
+
+    <!-- http://betamasaheft.eu/Ashura -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Ashura">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Astamhero -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Astamhero">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Astareeyo -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Astareeyo">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Astasreyo -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Astasreyo">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Aynakwellu -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Aynakwellu">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Ayyamattashriq -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Ayyamattashriq">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/BaalaEgzi -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/BaalaEgzi">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/BaalaNegestu -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/BaalaNegestu">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Baata -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Baata">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/BaataGebs -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/BaataGebs">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Baptism -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Baptism">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Barakaegziena -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Barakaegziena">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Berhan -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Berhan">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Berhansaraqa -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Berhansaraqa">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/BetaEsraelLiterature -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/BetaEsraelLiterature">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/BezuhanMaryam -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/BezuhanMaryam">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Bible -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Bible">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Biography -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Biography">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Book -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Book">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/CNewYear -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/CNewYear">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/CalendaricNote -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/CalendaricNote">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/CanaofGalilee -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/CanaofGalilee">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/CanonLaw -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/CanonLaw">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Catholicism -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Catholicism">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Chant_Modes -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Chant_Modes"/>
+
+
+
+    <!-- http://betamasaheft.eu/Chants -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Chants">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Christian -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Christian">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Feasts"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ChristianContent -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ChristianContent">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ChristianLiterature -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ChristianLiterature">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Christianity -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Christianity">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ChristmasLedat -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ChristmasLedat">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Chronicles -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Chronicles">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Chronography -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Chronography">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Codex -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Codex">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/CommemorativeNote -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/CommemorativeNote">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Comment -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Comment">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Commentary -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Commentary">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Condemnation -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Condemnation">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Confessions -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Confessions"/>
+
+
+
+    <!-- http://betamasaheft.eu/Coptic -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Coptic">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Correction -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Correction">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Crucifixion -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Crucifixion">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/CrucifixionSeqlat -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/CrucifixionSeqlat">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/DabraMetmaq -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/DabraMetmaq">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/DabraQwesqwam -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/DabraQwesqwam">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/DabraSeyon -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/DabraSeyon">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/DabraTabor -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/DabraTabor">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/DabraZayt -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/DabraZayt">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Daqseyos -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Daqseyos">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/DonationNote -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/DonationNote">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Doxology -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Doxology">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/EOTC -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/EOTC">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Easter -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Easter">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Erafta -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Erafta">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Ergata -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Ergata">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Ethiopian -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Ethiopian">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Excerpt -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Excerpt">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Excommunication -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Excommunication">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Exhortation -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Exhortation">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/EzelMode -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/EzelMode">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Chant_Modes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Feasts -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Feasts"/>
+
+
+
+    <!-- http://betamasaheft.eu/Felsata -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Felsata">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Fiction -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Fiction">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/FirstGondarineStyle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/FirstGondarineStyle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/FirstSolomonicStyle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/FirstSolomonicStyle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/FlightintoEgypt -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/FlightintoEgypt">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Foundation -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Foundation">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/FoundationCharter -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/FoundationCharter">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Ganna -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Ganna">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/GeezMode -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/GeezMode">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Chant_Modes"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Genealogy -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Genealogy">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Gezrat -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Gezrat">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Gloss -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Gloss">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/GoldenGospel -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/GoldenGospel">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/special_mss"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Gon -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Gon">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Greek -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Greek">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Orthodox"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/GuarantorsList -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/GuarantorsList">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Gubaeqana -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Gubaeqana">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/GuestText -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/GuestText">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Gurage -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Gurage">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Hagiography -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Hagiography">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Hanna -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Hanna">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Hanukkah -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Hanukkah">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Headband -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Headband">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/HistoryAndHistoriography -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/HistoryAndHistoriography">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Homily -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Homily">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/INewYear -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/INewYear">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Idaladha -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Idaladha">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Idalfitr -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Idalfitr">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Inscription -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Inscription">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Inventory -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Inventory">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Invocation -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Invocation">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Islam -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Islam">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Islamic -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Islamic">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Feasts"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/IslamicLiterature -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/IslamicLiterature">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/JNewYear -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/JNewYear">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Jewish -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Jewish">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Feasts"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Judaism -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Judaism">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Koran -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Koran">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/LandGrant -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/LandGrant">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/LaylatalBaraat -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/LaylatalBaraat">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Laylatalqadr -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Laylatalqadr">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Leaf -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Leaf">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Lebbamedr -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Lebbamedr">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Lectionary -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Lectionary">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/LegalDocument -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/LegalDocument">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Leporello -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Leporello">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Letter -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Letter">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Liturgy -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Liturgy">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/LongCycle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/LongCycle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Mabraq -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Mabraq">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/MadhaneAlam -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/MadhaneAlam">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Maedot -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Maedot">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Maerar -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Maerar">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Magic -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Magic">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/MagicFormula -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/MagicFormula">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/MagicText -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/MagicText">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/MalkeHymn -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/MalkeHymn">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/MaryamSeyon -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/MaryamSeyon">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Masqal -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Masqal">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Mawlid -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Mawlid">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Medicine -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Medicine">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Miracle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Miracle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Miscellanea -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Miscellanea">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Missal -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Missal">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/MoPe -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/MoPe">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ModernStyle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ModernStyle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/MonasticLiterature -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/MonasticLiterature">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/NativityofMary -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/NativityofMary">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/NaturalSciences -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/NaturalSciences">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/NewTestament -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/NewTestament">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Nineveh -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Nineveh">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Objects_and_Animals -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Objects_and_Animals"/>
+
+
+
+    <!-- http://betamasaheft.eu/Occupation -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Occupation"/>
+
+
+
+    <!-- http://betamasaheft.eu/OldTestament -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/OldTestament">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Oromo -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Oromo">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Orthodox -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Orthodox">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Other -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Other">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/OwnershipNote -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/OwnershipNote">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Paks1 -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Paks1">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Paks2 -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Paks2">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/PalmSunday -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/PalmSunday">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Passover -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Passover">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Pentecost -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Pentecost">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Periods -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Periods"/>
+
+
+
+    <!-- http://betamasaheft.eu/Philosophy -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Philosophy">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Photograph -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Photograph">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Place_types -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Place_types"/>
+
+
+
+    <!-- http://betamasaheft.eu/Poem -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Poem">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/PoemArke -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/PoemArke">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/PoemQene -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/PoemQene">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/PoemSalam -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/PoemSalam">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Poetry -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Poetry">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/PostGondarineStyle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/PostGondarineStyle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Prayers -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Prayers">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ProtectivePrayer -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ProtectivePrayer">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Protestantism -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Protestantism">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Pseudoepigrapha -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Pseudoepigrapha">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/PurchaseNote -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/PurchaseNote">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Purim -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Purim">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Qedameseur -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Qedameseur">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Qeddasebeta -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Qeddasebeta">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Ramadan -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Ramadan">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ReceiptNote -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ReceiptNote">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Record -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Record">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/RecordDistribution -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/RecordDistribution">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/RecordGuarantors -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/RecordGuarantors">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/RecordLitigation -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/RecordLitigation">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/RecordReconciliation -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/RecordReconciliation">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/RecordTransaction -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/RecordTransaction">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Religion -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Religion">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Rituals -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Rituals">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/RitualsAndRites -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/RitualsAndRites">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Russian -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Russian">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Orthodox"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Sawit -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Sawit">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ScribalNoteAssigningLang -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteAssigningLang">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ScribalNoteBequeathing -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteBequeathing">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ScribalNoteCommencing -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteCommencing">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ScribalNoteCommissioning -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteCommissioning">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ScribalNoteCompleting -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteCompleting">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ScribalNoteOrdering -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteOrdering">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ScribalSignature -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ScribalSignature">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ScribalSupplication -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ScribalSupplication">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Scroll -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Scroll">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/SecondGondarineStyle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/SecondGondarineStyle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/SecondSolomonicStyle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/SecondSolomonicStyle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Seddat -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Seddat">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Shavuot -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Shavuot">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Shia -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Shia">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islam"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ShortCycle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ShortCycle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/StampExlibris -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/StampExlibris">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Subjects -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Subjects"/>
+
+
+
+    <!-- http://betamasaheft.eu/Subscription -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Subscription">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Sunni -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Sunni">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islam"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Supplication -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Supplication">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Syriac -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Syriac">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Orthodox"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Tabernacles -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Tabernacles">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Tadewos -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Tadewos">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Tailband -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Tailband">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Tentasomaledat -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Tentasomaledat">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Tesbeet -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Tesbeet">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Theology -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Theology">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ThirdSolomonicStyle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ThirdSolomonicStyle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/TigrinyaLiterature -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/TigrinyaLiterature">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Tomas -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Tomas">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Traditional -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Traditional">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/TransactionNote -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/TransactionNote">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Translation -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Translation">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Unclear -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Unclear">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Additiones"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Vocabulary -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Vocabulary">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/Yomkippur -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Yomkippur">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ZaMa -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ZaMa">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/academic -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/academic">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/academicInstitution -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/academicInstitution">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/administrativeUnit -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/administrativeUnit">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/alabaster -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/alabaster">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/amba -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/amba">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/angel -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/angel">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/animal -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/animal">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/arch -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/arch">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/archaeologicalSite -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/archaeologicalSite">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/architecture -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/architecture">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/area -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/area">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/art -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/art">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/attribute -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/attribute">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/auth -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/auth">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/awragga -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/awragga">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/bay -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/bay">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/bearded -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/bearded">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/beardless -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/beardless">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/bird -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/bird">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/bronze -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/bronze">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/cape -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/cape">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/cardboard -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/cardboard">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/castle -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/castle">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/cataract -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/cataract">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/cave -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/cave">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/censer -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/censer">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/chapel -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/chapel">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/church -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/church">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/city -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/city">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/codex -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/codex">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/column -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/column">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/country -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/country">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/cross -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/cross">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/curtain -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/curtain">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/dabr -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/dabr">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/dam -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/dam">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/deadjesus -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/deadjesus">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/desert -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/desert">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/district -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/district">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/donordepiction -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/donordepiction">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/dragon -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/dragon">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ecclesiastic -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ecclesiastic">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/emirate -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/emirate">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/emptycross -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/emptycross">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/eucharist -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/eucharist">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/falls -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/falls">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/farm -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/farm">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/forest -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/forest">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/fort -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/fort">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/gadam -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/gadam">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/gatar -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/gatar">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/gesture -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/gesture">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/gestureblessing -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/gestureblessing">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/gesturegrief -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/gesturegrief">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/gestureorans -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/gestureorans">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/gesturewitnessing -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/gesturewitnessing">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/gorge -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/gorge">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/gulf -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/gulf">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/halo -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/halo">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/hodegetria -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/hodegetria">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ins -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ins">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/interlace -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/interlace">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/island -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/island">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/katama -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/katama">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/kingdom -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/kingdom">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/lake -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/lake">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/leather -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/leather">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/library -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/library">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/literary -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/literary">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/livingjesus -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/livingjesus">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/mandorla -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/mandorla">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/market -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/market">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/medical -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/medical">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/metal -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/metal">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/military -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/military">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/miniatureCollection -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/miniatureCollection">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/special_mss"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/monastery -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/monastery">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/mosque -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/mosque">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/mountain -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/mountain">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/mss -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/mss">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/museum -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/museum">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/nar -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/nar">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/notSpecified -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/notSpecified">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/oasis -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/oasis">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/other -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/other">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/paper -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/paper">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/papyrus -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/papyrus">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/parchment -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/parchment">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/pass -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/pass">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/peninsula -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/peninsula">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/pers -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/pers">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/place -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/place">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/plain -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/plain">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/planet -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/planet">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/plateau -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/plateau">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/political -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/political">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/port -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/port">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/post -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/post">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/qabale -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/qabale">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/quarter -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/quarter">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/qushat -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/qushat">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/region -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/region">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/religiousSite -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/religiousSite">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/river -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/river">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/rockSite -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/rockSite">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/ruler -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/ruler">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/saluspopuli -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/saluspopuli">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/scroll -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/scroll">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/sea -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/sea">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/seated -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/seated">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/settlement -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/settlement">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/shield -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/shield">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/shrine -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/shrine">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/silk -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/silk">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/site -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/site">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/spear -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/spear">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/special_mss -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/special_mss"/>
+
+
+
+    <!-- http://betamasaheft.eu/sponge -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/sponge">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/spring -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/spring">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/standing -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/standing">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/state -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/state">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/station -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/station">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/stone -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/stone">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/strait -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/strait">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/sultanate -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/sultanate">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/sunandmoon -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/sunandmoon">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/sword -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/sword">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/tabiya -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/tabiya">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/temple -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/temple">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/tetramorph -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/tetramorph">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/textile -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/textile">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/town -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/town">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/twothieves -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/twothieves">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/valley -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/valley">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/vestment -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/vestment">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/volcano -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/volcano">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/wadi -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/wadi">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/warada -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/warada">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/well -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/well">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/wood -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/wood">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/work -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/work">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/zoba -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/zoba">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://betamasaheft.eu/zone -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/zone">
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
+    </owl:Class>
+
+
+
+    <!-- http://lawd.info/ontology/AssembledWork -->
+
+    <owl:Class rdf:about="http://lawd.info/ontology/AssembledWork">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://lawd.info/ontology/Person -->
+
+    <owl:Class rdf:about="http://lawd.info/ontology/Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://lawd.info/ontology/Place -->
+
+    <owl:Class rdf:about="http://lawd.info/ontology/Place">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://lawd.info/ontology/WrittenWork -->
+
+    <owl:Class rdf:about="http://lawd.info/ontology/WrittenWork">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://pelagios.github.io/vocab/terms#AnnotatedThing -->
+
+    <owl:Class rdf:about="http://pelagios.github.io/vocab/terms#AnnotatedThing">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+    </owl:Class>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E42_Identifier -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E52_Time-span -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E54_Dimension -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/E57_Material -->
+
+    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Description -->
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Description"/>
+
+
+
+    <!-- http://www.w3.org/ns/oa#Annotation -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/oa#Annotation"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://betamasaheft.eu/ -->
+
+    <owl:NamedIndividual rdf:about="http://betamasaheft.eu/">
+        <dc:language rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</dc:language>
+        <dc:publisher>Akademie der Wissenschaften Hamburg</dc:publisher>
+        <dc:title>Beta Maṣāḥǝft</dc:title>
+    </owl:NamedIndividual>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#A1"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#A2"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#A3"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#A4"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Cah1"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Cah2"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Cah3"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Cah4"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Cont1"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Cont2"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Cont3"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Cont4"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Cont5"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#D1"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#D2"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#D3"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Ecri1"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Ecri2"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Ecri3"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Ecri4"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Ecri5"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Ecri6"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#MA1"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#MA2"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#MA3"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#MA4"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Mat1"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Mat2"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Mat3"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Mat4"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Mat5"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Mep1"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Mep2"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Mep3"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Mep4"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Mep5"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#ModeleCah"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#ModeleEcri"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#ModeleMain"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#ModeleMarq"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#ModeleMat"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#ModeleMeP"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#ModeleRegl"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#MutilationAjout"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Permutation"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Remplacement"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Restauration"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UnionAjout"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#R1"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#R2"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#R3"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Regl1"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Regl2"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#Regl3"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UniCah"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UniEcri"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UniMain"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UniMat"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UniMeP"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UniRegl"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UniProd-C"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UniProd-C-MC"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UniProd-M"/>
+            <rdf:Description rdf:about="http://Synthax.du.Codex/ontology#UniProd-MC"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://betamasaheft.eu/Book"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/Codex"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/Inscription"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/Leaf"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/Leporello"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/Other"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/Photograph"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/Scroll"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://betamasaheft.eu/alabaster"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/bronze"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/cardboard"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/leather"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/metal"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/other"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/paper"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/papyrus"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/parchment"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/silk"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/stone"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/textile"/>
+            <rdf:Description rdf:about="http://betamasaheft.eu/wood"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
