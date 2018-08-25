@@ -139,6 +139,8 @@
             </xsl:variable>
             <!--            main group of triples for one resource   -->
             <rdf:Description rdf:about="http://betamasaheft.eu/{@xml:id}">
+                <!--                OPEN DATA LICENSE FOR THE RDF-->
+                <dcterms:licence rdf:resource="http://opendatacommons.org/licenses/odbl/1.0/"/>
                 <!--                general part, valid for all records -->
                 <rdf:type rdf:resource="http://betamasaheft.eu/{@type}"/>
                 <dcterms:source rdf:resource="{$xmluri}"/>
