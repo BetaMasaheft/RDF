@@ -232,6 +232,14 @@
                     <xsl:if test="//t:place/@sameAs">
                         <skos:exactMatch rdf:resource="https://www.wikidata.org/entity/{//t:place/@sameAs}"/>
                     </xsl:if>
+                    <xsl:if test="//t:place/@type">
+                        <xsl:choose> <xsl:when test="matches(//t:place/@type, '\s')"><xsl:for-each select="tokenize(normalize-space(//t:place/@type), ' ')">
+                            <pleiades:hasFeatureType rdf:resource="http://betamasaheft.eu/authority-files/{current()}"/>
+                        </xsl:for-each></xsl:when>
+                        <xsl:otherwise>
+                            <pleiades:hasFeatureType rdf:resource="http://betamasaheft.eu/authority-files/{//t:place/@type}"/>
+                        </xsl:otherwise></xsl:choose>
+                    </xsl:if>
                     <xsl:apply-templates select="//t:state"/>
                     <xsl:apply-templates select="@type | @subtype"/>
                     <xsl:apply-templates select="//t:place/t:placeName" mode="pn"/>
@@ -617,9 +625,11 @@
             <xsl:attribute name="rdf:about">
                 <xsl:value-of select="concat('http://betamasaheft.eu/', $mainID, '/', $type, '/', $id)"/>
             </xsl:attribute>
+            <dcterms:isPartOf rdf:resource="{concat('http://betamasaheft.eu/', $mainID)}"/>
             <rdf:type rdf:resource="http://betamasaheft.eu/{$type}"/>
             <xsl:apply-templates select="descendant::t:date"/>
             <xsl:apply-templates select="descendant::t:persName[@ref]"/>
+            <xsl:apply-templates select="descendant::t:title[@ref]" mode="rel"/>
             <xsl:apply-templates select="descendant::t:ref[@type]"/>
             <xsl:apply-templates select="t:locus"/>
             <xsl:if test="t:ab[@type='ruling']">
@@ -1167,7 +1177,7 @@
                 <xsl:value-of select="current-date()"/>
             </oa:annotatedAt>
             <xsl:if test="$passage != ' ' and $citation != ''">
-            <lawd:hasAttestation><xsl:attribute name="rdf:resource"><xsl:value-of select="concat('http://betamasaheft.eu/urn:dts:BetMas:',$mainID,':',$passage)"/></xsl:attribute></lawd:hasAttestation>
+                <lawd:hasAttestation><xsl:attribute name="rdf:resource"><xsl:value-of select="concat('http://betamasaheft.eu/api/dts/document?id=urn:dts:betmas:',$mainID,':',$passage)"/></xsl:attribute></lawd:hasAttestation>
             <lawd:hasCitation><xsl:value-of select="$citation"/><xsl:text> </xsl:text><xsl:value-of select="$passage"/></lawd:hasCitation>
             </xsl:if>
             <xsl:if test="normalize-space(string-join(text(), '')) != ''"><lawd:hasName><xsl:value-of select="normalize-space(string-join(text(), ' '))"/></lawd:hasName></xsl:if>
@@ -1188,7 +1198,7 @@
             <oa:annotatedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#date">
                 <xsl:value-of select="current-date()"/>
             </oa:annotatedAt>
-            <xsl:if test="$passage != ' ' and $citation != ''"><lawd:hasAttestation><xsl:attribute name="rdf:resource"><xsl:value-of select="concat('http://betamasaheft.eu/urn:dts:BetMas:',$mainID,':',$passage)"/></xsl:attribute></lawd:hasAttestation>
+            <xsl:if test="$passage != ' ' and $citation != ''"><lawd:hasAttestation><xsl:attribute name="rdf:resource"><xsl:value-of select="concat('http://betamasaheft.eu/api/dts/document?id=urn:dts:betmas:',$mainID,':',$passage)"/></xsl:attribute></lawd:hasAttestation>
             <lawd:hasCitation><xsl:value-of select="$citation"/><xsl:text> </xsl:text><xsl:value-of select="$passage"/></lawd:hasCitation>
             </xsl:if><xsl:if test="t:roleName">
                 <xsl:for-each select="t:roleName">
@@ -1205,6 +1215,14 @@
     </xsl:template>
 
     <xsl:template match="t:persName">
+        <dc:relation>
+            <xsl:attribute name="rdf:resource">
+                <xsl:value-of select="concat('http://betamasaheft.eu/', @ref)"/>
+            </xsl:attribute>
+        </dc:relation>
+    </xsl:template>
+    
+    <xsl:template match="t:title" mode="rel">
         <dc:relation>
             <xsl:attribute name="rdf:resource">
                 <xsl:value-of select="concat('http://betamasaheft.eu/', @ref)"/>
