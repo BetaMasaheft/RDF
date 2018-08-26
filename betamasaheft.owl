@@ -1,14 +1,25 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://betamasaheft.eu/"
      xml:base="http://betamasaheft.eu/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ns1="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:core="http://purl.org/ontology/olo/core#"
+     xmlns:oa="http://www.w3.org/ns/oa#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://betamasaheft.eu/">
         <owl:imports rdf:resource="https://w3id.org/sdc/ontology/0.1"/>
+        <owl:imports rdf:resource="http://purl.org/saws/ontology"/>
+        <owl:imports rdf:resource="http://lawd.info/ontology/1.0/"/>
         <dc:description>The present ontology describes the structure of information in the RDF annotations
         exported from TEI files of the Beta Maṣāḥǝft project.</dc:description>
         <rdfs:label>Beta Maṣāḥǝft</rdfs:label>
@@ -962,15 +973,6 @@
     
 
 
-    <!-- http://www.cidoc-crm.org/cidoc-crm/P90_has_value -->
-
-    <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P90_has_value">
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.cidoc-crm.org/cidoc-crm/P91_has_unit -->
 
     <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P91_has_unit">
@@ -1850,7 +1852,9 @@
 
     <!-- http://betamasaheft.eu/Documents -->
 
-    <owl:Class rdf:about="http://betamasaheft.eu/Documents"/>
+    <owl:Class rdf:about="http://betamasaheft.eu/Documents">
+        <rdfs:comment xml:lang="en">A document or addition in the Beta maṣāḥǝft data.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -2614,7 +2618,9 @@
 
     <!-- http://betamasaheft.eu/Passage -->
 
-    <owl:Class rdf:about="http://betamasaheft.eu/Passage"/>
+    <owl:Class rdf:about="http://betamasaheft.eu/Passage">
+        <rdfs:comment xml:lang="en">A passage of a text or transcription in Beta maṣāḥǝft</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -2660,7 +2666,9 @@
 
     <!-- http://betamasaheft.eu/Place -->
 
-    <owl:Class rdf:about="http://betamasaheft.eu/Place"/>
+    <owl:Class rdf:about="http://betamasaheft.eu/Place">
+        <rdfs:comment xml:lang="en">A place in Ethiopia registered in Beta maṣāḥǝft</rdfs:comment>
+    </owl:Class>
     
 
 
