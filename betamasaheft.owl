@@ -40,12 +40,89 @@
     
 
 
+    <!-- http://betamasaheft.eu/baptizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/baptizedBy">
+        <owl:inverseOf rdf:resource="http://betamasaheft.eu/hasBaptized"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
+        <rdfs:comment xml:lang="en">has been baptized by</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/brotherInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/brotherInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
+        <rdfs:comment xml:lang="en">is the brother of the legally conjugated partner</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/daugtherInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/daugtherInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
+        <rdfs:comment xml:lang="en">is the wife of the son</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/fatherInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/fatherInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
+        <rdfs:comment xml:lang="en">is the father of the legally conjugated partner</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/hasBaptized -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasBaptized">
+        <rdfs:comment xml:lang="en">has baptized</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/hasLexiconEntry -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasLexiconEntry">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Place"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F9_Place"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/Place"/>
+        <rdfs:comment xml:lang="en">associates a Dillmann Online Lexicon Linguae Aethiopicae person name to the person record in the subject</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://betamasaheft.eu/hasLocus -->
 
     <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasLocus">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Documents"/>
         <rdfs:domain rdf:resource="http://betamasaheft.eu/MScomponents"/>
+        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#Discontinuite"/>
+        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniProd"/>
+        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#Unit"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/Locus"/>
+        <rdfs:comment>might be used to locate a unit defined relationally. If stated, a further relation is needed with one of the properties defining the locus</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/hasOrdained -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasOrdained">
+        <owl:inverseOf rdf:resource="http://betamasaheft.eu/ordainedBy"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:comment xml:lang="en">has ordained to a religious ministery</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -55,6 +132,20 @@
     <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasRole">
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/hasTabot -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasTabot">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Place"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/ins"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/efrbroo/F9_Place"/>
+        <rdfs:range rdf:resource="http://lawd.info/ontology/Place"/>
+        <rdfs:comment xml:lang="en">This person has a Tābot at the location</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -71,6 +162,75 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:comment xml:lang="en">subject if husband of object</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/isAuthorOfEthiopicTranslation -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/isAuthorOfEthiopicTranslation">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:range rdf:resource="http://lawd.info/ontology/WrittenWork"/>
+        <rdfs:comment xml:lang="en">The subject of the relation is author of a translation of a work in another language and there is no digital resource enabling us to document the authorship of this work and the fact that the work as such is a translation of another work.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/isGoldenGospelof -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/isGoldenGospelof">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Place"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/ins"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/efrbroo/F9_Place"/>
+        <rdfs:range rdf:resource="http://lawd.info/ontology/Place"/>
+        <rdfs:comment xml:lang="en">The relation between a Golden Gospel and its original institution (even if the manuscript is now kept in a different place), to be used in cases where the definition of &quot;Golden Gospel&quot; is explicitly mentioned somewhere in the Gospel or when there is enough evidence that the Gospel is the main material repository of documentary texts related to a certain institution.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/isInLowOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/isInLowOf">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:comment xml:lang="en">in law relationships between persons</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/isPredecessorOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/isPredecessorOf">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
+        <rdfs:comment xml:lang="en">is the predecessor of another ruler</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/isSuccessorOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/isSuccessorOf">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:range rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
+        <rdfs:comment xml:lang="en">ruler successor of another ruler</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/motherInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/motherInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
+        <rdfs:comment xml:lang="en">is the mother of the legally conjugated partner</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -81,6 +241,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:comment xml:lang="en">Ordained priest, bishop or monk. Same as Consecrated.</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -95,12 +256,31 @@
     
 
 
+    <!-- http://betamasaheft.eu/sisterInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/sisterInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
+        <rdfs:comment xml:lang="en">is the sister of the legally conjugated partner</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/sonInLawOf -->
+
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/sonInLawOf">
+        <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
+        <rdfs:comment xml:lang="en">is the husband of the daugther</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://betamasaheft.eu/wifeOf -->
 
     <owl:ObjectProperty rdf:about="http://betamasaheft.eu/wifeOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:comment xml:lang="en">subject is the wife of object</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -498,7 +678,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/msfrag"/>
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mspart"/>
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
-        <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:range rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:ObjectProperty>
     
 
@@ -690,6 +870,22 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://betamasaheft.eu/isAntigraphOf -->
+
+    <owl:DatatypeProperty rdf:about="http://betamasaheft.eu/isAntigraphOf">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">the relation between a ms and the first printed edition of a text it contains</rdfs:comment>
+    </owl:DatatypeProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://betamasaheft.eu/isAntigraphOf"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">This is a tag in the Zotero EthioStudies Group library, prefixed bm:</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -898,6 +1094,12 @@
         <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniProd"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.org/dc/terms/bibliographicCitation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#range"/>
+        <owl:annotatedTarget rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment>This is a tag in the Zotero EthioStudies Group library, prefixed bm:</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -1015,302 +1217,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://betamasaheft.eu/AT1001Agony -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1001Agony">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1002Announciation -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1002Announciation">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1003Arrest -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1003Arrest">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1004Bitter -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1004Bitter">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1005Crucifixion -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1005Crucifixion">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1006Denial -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1006Denial">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1007Deposition -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1007Deposition">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1008Descent -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1008Descent">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1009Doubting -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1009Doubting">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1010Entombment -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1010Entombment">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1011Entry -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1011Entry">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1012Equestrian -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1012Equestrian">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1013EvaPortrait -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1013EvaPortrait">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1014Evangelists -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1014Evangelists">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1015Flagellation -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1015Flagellation">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1016Flight -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1016Flight">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1017WomenAtTomb -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1017WomenAtTomb">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1018JBefPilate -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1018JBefPilate">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1019Cana -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1019Cana">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1020Massacre -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1020Massacre">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1021MiraclesOfJesus -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1021MiraclesOfJesus">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1022MiraclesOfMary -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1022MiraclesOfMary">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1023Mocking -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1023Mocking">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1024MosesLaw -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1024MosesLaw">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1025NativityJesus -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1025NativityJesus">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1026NativityMary -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1026NativityMary">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1027PresentationJesus -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1027PresentationJesus">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1028HebrewsFurnace -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1028HebrewsFurnace">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1029Transfiguration -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1029Transfiguration">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1030Trinity -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1030Trinity">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1031VirginAndChild -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1031VirginAndChild">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1032Washing -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1032Washing">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1033Ascension -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1033Ascension">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1033Maiestas -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1033Maiestas">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1034Tempietto -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1034Tempietto">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1035HolyMan -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1035HolyMan">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/AT1036MercyCovenant -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/AT1036MercyCovenant">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Themes"/>
-    </owl:Class>
     
 
 
@@ -1437,14 +1343,6 @@
     <!-- http://betamasaheft.eu/Art_Keywords -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/Art_Keywords">
-        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
-    </owl:Class>
-    
-
-
-    <!-- http://betamasaheft.eu/Art_Themes -->
-
-    <owl:Class rdf:about="http://betamasaheft.eu/Art_Themes">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
     
@@ -2340,7 +2238,9 @@
 
     <!-- http://betamasaheft.eu/Locus -->
 
-    <owl:Class rdf:about="http://betamasaheft.eu/Locus"/>
+    <owl:Class rdf:about="http://betamasaheft.eu/Locus">
+        <rdfs:comment xml:lang="en">The placement of a unit, feature, part, component of a manuscript with reference to the foliation</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -2435,6 +2335,12 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Masqal">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
+    
+
+
+    <!-- http://betamasaheft.eu/Material -->
+
+    <owl:Class rdf:about="http://betamasaheft.eu/Material"/>
     
 
 
@@ -2882,7 +2788,9 @@
 
     <!-- http://betamasaheft.eu/Role -->
 
-    <owl:Class rdf:about="http://betamasaheft.eu/Role"/>
+    <owl:Class rdf:about="http://betamasaheft.eu/Role">
+        <rdfs:comment xml:lang="en">Role attested with a personal name</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -3233,7 +3141,7 @@
     <!-- http://betamasaheft.eu/alabaster -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/alabaster">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -3367,7 +3275,7 @@
     <!-- http://betamasaheft.eu/bronze -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/bronze">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -3383,7 +3291,7 @@
     <!-- http://betamasaheft.eu/cardboard -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/cardboard">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -3766,7 +3674,7 @@
     <!-- http://betamasaheft.eu/leather -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/leather">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -3822,7 +3730,7 @@
     <!-- http://betamasaheft.eu/metal -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/metal">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -3930,7 +3838,7 @@
     <!-- http://betamasaheft.eu/other -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/other">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -3938,7 +3846,7 @@
     <!-- http://betamasaheft.eu/paper -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/paper">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -3946,7 +3854,7 @@
     <!-- http://betamasaheft.eu/papyrus -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/papyrus">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -3954,7 +3862,7 @@
     <!-- http://betamasaheft.eu/parchment -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/parchment">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -4160,7 +4068,7 @@
     <!-- http://betamasaheft.eu/silk -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/silk">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -4232,7 +4140,7 @@
     <!-- http://betamasaheft.eu/stone -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/stone">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -4296,7 +4204,7 @@
     <!-- http://betamasaheft.eu/textile -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/textile">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -4368,7 +4276,7 @@
     <!-- http://betamasaheft.eu/wood -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/wood">
-        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
+        <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
     
 
@@ -4443,12 +4351,6 @@
     
 
 
-    <!-- http://www.cidoc-crm.org/cidoc-crm/E57_Material -->
-
-    <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E57_Material"/>
-    
-
-
     <!-- http://www.w3.org/ns/oa#Annotation -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/oa#Annotation"/>
@@ -4475,6 +4377,20 @@
         <dc:publisher>Akademie der Wissenschaften Hamburg</dc:publisher>
         <dc:title>Beta Maṣāḥǝft</dc:title>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://betamasaheft.eu/hasTotalLeaves">
+        <rdfs:comment>The total number of leaves in a manuscript.</rdfs:comment>
+    </rdf:Description>
     
 
 

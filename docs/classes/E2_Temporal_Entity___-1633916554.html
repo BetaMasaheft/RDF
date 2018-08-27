@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Ontology Browser</title>
+<meta http-equiv='content-type' content='text/html;charset=UTF-8'>
+<link rel='stylesheet' href='../css/default.css' type='text/css' />
+</head>
+
+<body>
+
+<div id='tabs'>
+<a href='../ontologies/index.html' class='' >Ontologies</a>
+<a href='index.html' class='' >Classes</a>
+<a href='../objectproperties/index.html' class='' >Object Properties</a>
+<a href='../dataproperties/index.html' class='' >Data Properties</a>
+<a href='../annotationproperties/index.html' class='' >Annotation Properties</a>
+<a href='../individuals/index.html' class='' >Individuals</a>
+<a href='../datatypes/index.html' class='' >Datatypes</a>
+<a href='../cloud/' class='' >Clouds</a>
+</div> <!-- tabs -->
+
+
+<div class='summary'><h2>Class: 'E2 Temporal Entity'</h2>
+
+<div id='annotations_(2)'>
+<h4>Annotations (2)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="../annotationproperties/comment___1501100887.html" class='Annotation Property' title="http://www.w3.org/2000/01/rdf-schema#comment">rdfs:comment</a> <span class='literal'>"Scope note:<br />This class comprises all phenomena, such as the instances of E4 Periods, E5 Events and states, which happen over a limited extent in time. This extent in time must be contiguous, i.e., without gaps. In case the defining kinds of phenomena for an instance of E2 Temporal Entity cease to happen, and occur later again at another time, we regard that the former E2 Temporal Entity has ended and a new instance has come into existence. In more intuitive terms, the same event cannot happen twice.<br /><br />In some contexts, these are also called perdurants. This class is disjoint from E77 Persistent Item. This is an abstract class and has no direct instances. E2 Temporal Entity is specialized into E4 Period, which applies to a particular geographic area (defined with a greater or lesser degree of precision), and E3 Condition State, which applies to instances of E18 Physical Thing.<br /><br />Examples:<br />- Bronze Age (E4)<br />- the earthquake in Lisbon 1755 (E5)<br />- the Peterhof Palace near Saint Petersburg being in ruins from 1944 – 1946 (E3)<br /><br />In First Order Logic:<br />E2(x) ⊃ E1(x)"</span> <span style='color: black;'>@en</span></li>
+<li class="asserted"><a href="../annotationproperties/label___653429740.html" class='Annotation Property' title="http://www.w3.org/2000/01/rdf-schema#label">rdfs:label</a> <span class='literal'>"E2 Temporal Entity"</span> <span style='color: black;'>@en</span></li>
+</ul>
+</div>
+</div><!-- annotations (2) -->
+
+
+<div id='superclasses_(2)'>
+<h4>Superclasses (2)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="E1_CRM_Entity___-12729153.html" class='Class' title="http://erlangen-crm.org/current/E1_CRM_Entity">'E1&nbsp;CRM&nbsp;Entity'</a></li>
+<li class="asserted"><a href="../objectproperties/P4_has_time-span___455565650.html" class='Object Property' title="http://erlangen-crm.org/current/P4_has_time-span">'P4&nbsp;has&nbsp;time-span'</a> <span class='exactly'>exactly</span> 1 <a href="Thing___-200689702.html" class='Class' title="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></li>
+</ul>
+</div>
+</div><!-- superclasses (2) -->
+
+
+<div id='disjoints_(2)'>
+<h4>Disjoints (2)</h4>
+<div class='codebox'>
+<span class="asserted"><span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></span>,
+<span class="asserted"><a href="E77_Persistent_Item___1119477481.html" class='Class' title="http://erlangen-crm.org/current/E77_Persistent_Item">'E77&nbsp;Persistent&nbsp;Item'</a></span></div>
+</div><!-- disjoints (2) -->
+
+
+<div id='usage_(29)'>
+<h4>Usage (29)</h4>
+<div class='codebox'>
+<ul>
+<li class="asserted"><a href="E52_Time-Span___1184007541.html" class='Class' title="http://erlangen-crm.org/current/E52_Time-Span">'E52&nbsp;Time-Span'</a> <span class='keyword'>&sube;</span> <a href="../objectproperties/P4i_is_time-span_of___-538584785.html" class='Object Property' title="http://erlangen-crm.org/current/P4i_is_time-span_of">'P4&nbsp;is&nbsp;time-span&nbsp;of'</a> <span class='some'>some</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P114_is_equal_in_time_to___-370952960.html" class='Object Property' title="http://erlangen-crm.org/current/P114_is_equal_in_time_to">'P114&nbsp;is&nbsp;equal&nbsp;in&nbsp;time&nbsp;to'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P115_finishes___619173187.html" class='Object Property' title="http://erlangen-crm.org/current/P115_finishes">'P115&nbsp;finishes'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P115i_is_finished_by___396915090.html" class='Object Property' title="http://erlangen-crm.org/current/P115i_is_finished_by">'P115&nbsp;is&nbsp;finished&nbsp;by'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P116_starts___857313394.html" class='Object Property' title="http://erlangen-crm.org/current/P116_starts">'P116&nbsp;starts'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P116i_is_started_by___-177326410.html" class='Object Property' title="http://erlangen-crm.org/current/P116i_is_started_by">'P116&nbsp;is&nbsp;started&nbsp;by'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P117_occurs_during___-15480183.html" class='Object Property' title="http://erlangen-crm.org/current/P117_occurs_during">'P117&nbsp;occurs&nbsp;during'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P117i_includes___573094000.html" class='Object Property' title="http://erlangen-crm.org/current/P117i_includes">'P117&nbsp;includes'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P118_overlaps_in_time_with___-209220350.html" class='Object Property' title="http://erlangen-crm.org/current/P118_overlaps_in_time_with">'P118&nbsp;overlaps&nbsp;in&nbsp;time&nbsp;with'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P118i_is_overlapped_in_time_by___1780523063.html" class='Object Property' title="http://erlangen-crm.org/current/P118i_is_overlapped_in_time_by">'P118&nbsp;is&nbsp;overlapped&nbsp;in&nbsp;time&nbsp;by'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P119_meets_in_time_with___1884168815.html" class='Object Property' title="http://erlangen-crm.org/current/P119_meets_in_time_with">'P119&nbsp;meets&nbsp;in&nbsp;time&nbsp;with'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P119i_is_met_in_time_by___1443663024.html" class='Object Property' title="http://erlangen-crm.org/current/P119i_is_met_in_time_by">'P119&nbsp;is&nbsp;met&nbsp;in&nbsp;time&nbsp;by'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P120_occurs_before___1733638623.html" class='Object Property' title="http://erlangen-crm.org/current/P120_occurs_before">'P120&nbsp;occurs&nbsp;before'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P120i_occurs_after___-225810207.html" class='Object Property' title="http://erlangen-crm.org/current/P120i_occurs_after">'P120&nbsp;occurs&nbsp;after'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P4_has_time-span___455565650.html" class='Object Property' title="http://erlangen-crm.org/current/P4_has_time-span">'P4&nbsp;has&nbsp;time-span'</a> <span class='keyword'>Domain</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P114_is_equal_in_time_to___-370952960.html" class='Object Property' title="http://erlangen-crm.org/current/P114_is_equal_in_time_to">'P114&nbsp;is&nbsp;equal&nbsp;in&nbsp;time&nbsp;to'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P115_finishes___619173187.html" class='Object Property' title="http://erlangen-crm.org/current/P115_finishes">'P115&nbsp;finishes'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P115i_is_finished_by___396915090.html" class='Object Property' title="http://erlangen-crm.org/current/P115i_is_finished_by">'P115&nbsp;is&nbsp;finished&nbsp;by'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P116_starts___857313394.html" class='Object Property' title="http://erlangen-crm.org/current/P116_starts">'P116&nbsp;starts'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P116i_is_started_by___-177326410.html" class='Object Property' title="http://erlangen-crm.org/current/P116i_is_started_by">'P116&nbsp;is&nbsp;started&nbsp;by'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P117_occurs_during___-15480183.html" class='Object Property' title="http://erlangen-crm.org/current/P117_occurs_during">'P117&nbsp;occurs&nbsp;during'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P117i_includes___573094000.html" class='Object Property' title="http://erlangen-crm.org/current/P117i_includes">'P117&nbsp;includes'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P118_overlaps_in_time_with___-209220350.html" class='Object Property' title="http://erlangen-crm.org/current/P118_overlaps_in_time_with">'P118&nbsp;overlaps&nbsp;in&nbsp;time&nbsp;with'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P118i_is_overlapped_in_time_by___1780523063.html" class='Object Property' title="http://erlangen-crm.org/current/P118i_is_overlapped_in_time_by">'P118&nbsp;is&nbsp;overlapped&nbsp;in&nbsp;time&nbsp;by'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P119_meets_in_time_with___1884168815.html" class='Object Property' title="http://erlangen-crm.org/current/P119_meets_in_time_with">'P119&nbsp;meets&nbsp;in&nbsp;time&nbsp;with'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P119i_is_met_in_time_by___1443663024.html" class='Object Property' title="http://erlangen-crm.org/current/P119i_is_met_in_time_by">'P119&nbsp;is&nbsp;met&nbsp;in&nbsp;time&nbsp;by'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P120_occurs_before___1733638623.html" class='Object Property' title="http://erlangen-crm.org/current/P120_occurs_before">'P120&nbsp;occurs&nbsp;before'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P120i_occurs_after___-225810207.html" class='Object Property' title="http://erlangen-crm.org/current/P120i_occurs_after">'P120&nbsp;occurs&nbsp;after'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+<li class="asserted"><a href="../objectproperties/P4i_is_time-span_of___-538584785.html" class='Object Property' title="http://erlangen-crm.org/current/P4i_is_time-span_of">'P4&nbsp;is&nbsp;time-span&nbsp;of'</a> <span class='keyword'>Range</span> <span class='Class active-entity'>'E2&nbsp;Temporal&nbsp;Entity'</span></li>
+</ul>
+</div>
+</div><!-- usage (29) -->
+
+</div> <!-- summary -->
+<p class='footer'>
+<a href='http://code.google.com/p/ontology-browser/' target='_blank'>OWL HTML inside</a>
+</p>
+</body>
+</html>

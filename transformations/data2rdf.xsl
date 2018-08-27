@@ -63,7 +63,8 @@
                             <xsl:variable name="anchor" select="substring-after($id,'#')"/>
                             <xsl:variable name="type">
                                 
-                            <xsl:choose>
+                                <xsl:choose>
+                                    <xsl:when test="starts-with($anchor, 'ms')">msitem</xsl:when>
                                 <xsl:when test="starts-with($anchor, 'q')">quire</xsl:when>
                                 <xsl:when test="starts-with($anchor, 'h')">hand</xsl:when>
                                 <xsl:when test="starts-with($anchor, 'b')">binding</xsl:when>
@@ -976,7 +977,7 @@
         </xsl:if>
         <crm:P46_is_composed_of>
             <xsl:attribute name="rdf:resource">
-                <xsl:value-of select="concat('http://betamasaheft.eu/material/',@key)"/>
+                <xsl:value-of select="concat('http://betamasaheft.eu/vocabularies/material.html#',@key)"/>
             </xsl:attribute>
         </crm:P46_is_composed_of>
     </xsl:template>
@@ -1160,7 +1161,7 @@
     <xsl:template match="t:witness">
         <dc:source>
             <xsl:attribute name="rdf:resource">
-                <xsl:value-of select="concat('http://betamasaheft.eu/', @corresp)"/>
+                <xsl:value-of select="funct:id(@corresp)"/>
             </xsl:attribute>
         </dc:source>
     </xsl:template>
