@@ -24,8 +24,29 @@
         exported from TEI files of the Beta Maṣāḥǝft project.</dc:description>
         <rdfs:label>Beta Maṣāḥǝft</rdfs:label>
         <rdfs:isDefinedBy>Beta Maṣāḥǝft</rdfs:isDefinedBy>
+        <dc:language>en</dc:language>
+        <dc:language>fr</dc:language>
         <dc:creator>Pietro Maria Liuzzo</dc:creator>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -152,7 +173,9 @@
 
     <!-- http://betamasaheft.eu/hasTotalLeaves -->
 
-    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasTotalLeaves"/>
+    <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasTotalLeaves">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:ObjectProperty>
     
 
 
@@ -389,13 +412,44 @@
 
     <!-- http://purl.org/dc/elements/1.1/format -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/format"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/format">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Documents"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Place"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/auth"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/nar"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/AssembledWork"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/Person"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/Place"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/WrittenWork"/>
+        <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://purl.org/dc/elements/1.1/language -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/1.1/language">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Colophon"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Documents"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Place"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/addition"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/auth"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/msitem"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/nar"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/AssembledWork"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/Person"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/Place"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/WrittenWork"/>
+        <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
+        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniCirc"/>
+        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniProd"/>
+    </owl:ObjectProperty>
     
 
 
@@ -444,7 +498,24 @@
 
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Documents"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/MScomponents"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/Place"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/auth"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/ins"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/nar"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/AssembledWork"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/Person"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/Place"/>
+        <rdfs:domain rdf:resource="http://lawd.info/ontology/WrittenWork"/>
+        <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
+        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniCirc"/>
+        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniProd"/>
+    </owl:ObjectProperty>
     
 
 
@@ -710,19 +781,28 @@
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts -->
 
-    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts"/>
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts">
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/msfrag"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/msitem"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mspart"/>
+        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by -->
 
-    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by"/>
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by -->
 
-    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by"/>
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
+    </owl:ObjectProperty>
     
 
 
@@ -742,7 +822,9 @@
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P91_has_unit -->
 
-    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P91_has_unit"/>
+    <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P91_has_unit">
+        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
+    </owl:ObjectProperty>
     
 
 
@@ -867,7 +949,6 @@
 
     <owl:DatatypeProperty rdf:about="http://betamasaheft.eu/hasTotalLeaves">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -988,18 +1069,6 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/format">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/Documents"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/Place"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/auth"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/nar"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/AssembledWork"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/Place"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/WrittenWork"/>
-        <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -1009,24 +1078,6 @@
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/language">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/Colophon"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/Documents"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/Place"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/addition"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/auth"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/msitem"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/nar"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/AssembledWork"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/Place"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/WrittenWork"/>
-        <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
-        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniCirc"/>
-        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniProd"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
     </owl:DatatypeProperty>
     
 
@@ -1076,22 +1127,6 @@
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation">
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/Documents"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/MScomponents"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/Place"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/auth"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/ins"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/nar"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/AssembledWork"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/Person"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/Place"/>
-        <rdfs:domain rdf:resource="http://lawd.info/ontology/WrittenWork"/>
-        <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
-        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniCirc"/>
-        <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniProd"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     <owl:Axiom>
@@ -1139,10 +1174,6 @@
     <!-- http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts -->
 
     <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts">
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/msfrag"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/msitem"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/mspart"/>
-        <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -1151,7 +1182,6 @@
     <!-- http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by -->
 
     <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by">
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -1160,7 +1190,6 @@
     <!-- http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by -->
 
     <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by">
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -1178,7 +1207,6 @@
     <!-- http://www.cidoc-crm.org/cidoc-crm/P91_has_unit -->
 
     <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P91_has_unit">
-        <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
@@ -4371,9 +4399,6 @@
     <!-- http://betamasaheft.eu/ -->
 
     <owl:NamedIndividual rdf:about="http://betamasaheft.eu/">
-        <dc:language>en</dc:language>
-        <dc:language rdf:datatype="http://www.w3.org/2001/XMLSchema#language">en</dc:language>
-        <dc:language>fr</dc:language>
         <dc:publisher>Akademie der Wissenschaften Hamburg</dc:publisher>
         <dc:title>Beta Maṣāḥǝft</dc:title>
     </owl:NamedIndividual>
