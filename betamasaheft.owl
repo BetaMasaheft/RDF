@@ -17,7 +17,7 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="http://betamasaheft.eu/">
-        <owl:imports rdf:resource="https://w3id.org/sdc/ontology/0.1"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/BetaMasaheft/SyntaxeDuCodex/master/SyntaxeDuCodex.owl"/>
         <owl:imports rdf:resource="http://purl.org/saws/ontology"/>
         <owl:imports rdf:resource="http://lawd.info/ontology/1.0/"/>
         <dc:description>The present ontology describes the structure of information in the RDF annotations
@@ -28,10 +28,10 @@
         <dc:language>fr</dc:language>
         <dc:creator>Pietro Maria Liuzzo</dc:creator>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotation properties
@@ -39,7 +39,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/language -->
@@ -47,10 +47,10 @@
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/language">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#language"/>
     </owl:AnnotationProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -58,7 +58,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://betamasaheft.eu/baptizedBy -->
@@ -71,7 +71,7 @@
         <rdfs:range rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
         <rdfs:comment xml:lang="en">has been baptized by</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/brotherInLawOf -->
@@ -80,7 +80,7 @@
         <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
         <rdfs:comment xml:lang="en">is the brother of the legally conjugated partner</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/daugtherInLawOf -->
@@ -89,7 +89,7 @@
         <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
         <rdfs:comment xml:lang="en">is the wife of the son</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/fatherInLawOf -->
@@ -98,7 +98,7 @@
         <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
         <rdfs:comment xml:lang="en">is the father of the legally conjugated partner</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/hasBaptized -->
@@ -106,7 +106,7 @@
     <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasBaptized">
         <rdfs:comment xml:lang="en">has baptized</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/hasLexiconEntry -->
@@ -119,7 +119,7 @@
         <rdfs:domain rdf:resource="http://lawd.info/ontology/Place"/>
         <rdfs:comment xml:lang="en">associates a Dillmann Online Lexicon Linguae Aethiopicae person name to the person record in the subject</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/hasLocus -->
@@ -134,7 +134,7 @@
         <rdfs:range rdf:resource="http://betamasaheft.eu/Locus"/>
         <rdfs:comment>might be used to locate a unit defined relationally. If stated, a further relation is needed with one of the properties defining the locus</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/hasOrdained -->
@@ -145,7 +145,7 @@
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:comment xml:lang="en">has ordained to a religious ministery</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/hasRole -->
@@ -154,7 +154,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/Role"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/hasTabot -->
@@ -168,7 +168,7 @@
         <rdfs:range rdf:resource="http://lawd.info/ontology/Place"/>
         <rdfs:comment xml:lang="en">This person has a Tābot at the location</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/hasTotalLeaves -->
@@ -176,7 +176,7 @@
     <owl:ObjectProperty rdf:about="http://betamasaheft.eu/hasTotalLeaves">
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/husbandOf -->
@@ -187,7 +187,7 @@
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:comment xml:lang="en">subject if husband of object</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/isAuthorOfEthiopicTranslation -->
@@ -199,7 +199,7 @@
         <rdfs:range rdf:resource="http://lawd.info/ontology/WrittenWork"/>
         <rdfs:comment xml:lang="en">The subject of the relation is author of a translation of a work in another language and there is no digital resource enabling us to document the authorship of this work and the fact that the work as such is a translation of another work.</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/isGoldenGospelof -->
@@ -212,7 +212,7 @@
         <rdfs:range rdf:resource="http://lawd.info/ontology/Place"/>
         <rdfs:comment xml:lang="en">The relation between a Golden Gospel and its original institution (even if the manuscript is now kept in a different place), to be used in cases where the definition of &quot;Golden Gospel&quot; is explicitly mentioned somewhere in the Gospel or when there is enough evidence that the Gospel is the main material repository of documentary texts related to a certain institution.</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/isInLowOf -->
@@ -222,7 +222,7 @@
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:comment xml:lang="en">in law relationships between persons</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/isPredecessorOf -->
@@ -234,7 +234,7 @@
         <rdfs:range rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
         <rdfs:comment xml:lang="en">is the predecessor of another ruler</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/isSuccessorOf -->
@@ -246,7 +246,7 @@
         <rdfs:range rdf:resource="http://erlangen-crm.org/efrbroo/F10_Person"/>
         <rdfs:comment xml:lang="en">ruler successor of another ruler</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/motherInLawOf -->
@@ -255,7 +255,7 @@
         <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
         <rdfs:comment xml:lang="en">is the mother of the legally conjugated partner</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/ordainedBy -->
@@ -266,7 +266,7 @@
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:comment xml:lang="en">Ordained priest, bishop or monk. Same as Consecrated.</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/roleType -->
@@ -276,7 +276,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/Role"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/Occupation"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/sisterInLawOf -->
@@ -285,7 +285,7 @@
         <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
         <rdfs:comment xml:lang="en">is the sister of the legally conjugated partner</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/sonInLawOf -->
@@ -294,7 +294,7 @@
         <rdfs:subPropertyOf rdf:resource="http://betamasaheft.eu/isInLowOf"/>
         <rdfs:comment xml:lang="en">is the husband of the daugther</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/wifeOf -->
@@ -305,7 +305,7 @@
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:comment xml:lang="en">subject is the wife of object</rdfs:comment>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://data.snapdrgn.net/ontology/snap#AllianceWith -->
@@ -315,7 +315,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://data.snapdrgn.net/ontology/snap#FatherOf -->
@@ -325,7 +325,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://data.snapdrgn.net/ontology/snap#SonOf -->
@@ -335,25 +335,25 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://data.snapdrgn.net/ontology/snap#bond-with -->
 
     <owl:ObjectProperty rdf:about="http://data.snapdrgn.net/ontology/snap#bond-with"/>
-    
+
 
 
     <!-- http://data.snapdrgn.net/ontology/snap#hasBond -->
 
     <owl:ObjectProperty rdf:about="http://data.snapdrgn.net/ontology/snap#hasBond"/>
-    
+
 
 
     <!-- http://data.snapdrgn.net/ontology/snap#occupation -->
 
     <owl:ObjectProperty rdf:about="http://data.snapdrgn.net/ontology/snap#occupation"/>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/CLP46i_may_form_part_of -->
@@ -363,7 +363,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/P129_is_about -->
@@ -376,7 +376,7 @@
         <rdfs:range rdf:resource="http://betamasaheft.eu/ins"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://erlangen-crm.org/current/P129i_is_subject_of -->
@@ -386,7 +386,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://lawd.info/ontology/hasAttestation -->
@@ -395,7 +395,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://lawd.info/ontology/hasName -->
@@ -407,7 +407,7 @@
         <rdfs:domain rdf:resource="http://lawd.info/ontology/Person"/>
         <rdfs:domain rdf:resource="http://lawd.info/ontology/Place"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/format -->
@@ -426,7 +426,7 @@
         <rdfs:domain rdf:resource="http://lawd.info/ontology/WrittenWork"/>
         <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/language -->
@@ -450,7 +450,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniCirc"/>
         <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniProd"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/relation -->
@@ -484,7 +484,7 @@
         <rdfs:range rdf:resource="http://lawd.info/ontology/WrittenWork"/>
         <rdfs:range rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/source -->
@@ -493,7 +493,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
@@ -516,7 +516,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniCirc"/>
         <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniProd"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/creator -->
@@ -526,7 +526,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/hasPart -->
@@ -549,7 +549,7 @@
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://lawd.info/ontology/WrittenWork"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/isPartOf -->
@@ -558,19 +558,19 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/MScomponents"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/licence -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/licence"/>
-    
+
 
 
     <!-- http://purl.org/dc/terms/temporal -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/terms/temporal"/>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#contains -->
@@ -580,7 +580,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#follows -->
@@ -590,7 +590,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#formsPartOf -->
@@ -600,7 +600,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#hasOwned -->
@@ -610,7 +610,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#isAncestorOf -->
@@ -620,7 +620,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#isAttributedToAuthor -->
@@ -630,7 +630,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#isCopierOf -->
@@ -640,7 +640,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#isDifferentTo -->
@@ -650,7 +650,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#isDirectCopyOf -->
@@ -660,7 +660,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#isRelatedTo -->
@@ -670,7 +670,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#isShorterVersionOf -->
@@ -680,7 +680,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/saws/ontology#isVersionInAnotherLanguageOf -->
@@ -690,7 +690,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/work"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://purl.org/vocab/relationship/rel:enemyOf -->
@@ -700,7 +700,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://syriaca.org/documentation/relations.html#has-relation-to-place -->
@@ -710,7 +710,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/Place"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by -->
@@ -721,13 +721,13 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique -->
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"/>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension -->
@@ -739,7 +739,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of -->
@@ -751,7 +751,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P48_has_preferred_identifier -->
@@ -759,7 +759,7 @@
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P48_has_preferred_identifier">
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span -->
@@ -767,7 +767,7 @@
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span">
         <rdfs:range rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location -->
@@ -776,7 +776,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/ins"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts -->
@@ -787,7 +787,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mspart"/>
         <rdfs:domain rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by -->
@@ -795,7 +795,7 @@
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by">
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by -->
@@ -803,7 +803,7 @@
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by">
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by -->
@@ -811,13 +811,13 @@
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P80_end_is_qualified_by">
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P90_has_value -->
 
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P90_has_value"/>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P91_has_unit -->
@@ -825,7 +825,7 @@
     <owl:ObjectProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P91_has_unit">
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#location -->
@@ -835,7 +835,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/Place"/>
         <rdfs:domain rdf:resource="http://betamasaheft.eu/ins"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
@@ -850,7 +850,7 @@
         <rdfs:range rdf:resource="http://lawd.info/ontology/Person"/>
         <rdfs:range rdf:resource="http://lawd.info/ontology/Place"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
@@ -865,7 +865,7 @@
         <rdfs:range rdf:resource="http://lawd.info/ontology/Person"/>
         <rdfs:range rdf:resource="http://lawd.info/ontology/Place"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
@@ -880,7 +880,7 @@
         <rdfs:range rdf:resource="http://lawd.info/ontology/Person"/>
         <rdfs:range rdf:resource="http://lawd.info/ontology/Place"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/oa#hasBody -->
@@ -895,7 +895,7 @@
         <rdfs:range rdf:resource="http://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/work"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/oa#hasTarget -->
@@ -908,19 +908,19 @@
         <rdfs:range rdf:resource="http://lawd.info/ontology/Person"/>
         <rdfs:range rdf:resource="http://lawd.info/ontology/Place"/>
     </owl:ObjectProperty>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/homepage -->
 
     <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/homepage"/>
-    
+
 
 
     <!-- http://xmlns.com/foaf/0.1/primaryTopicOf -->
 
     <owl:ObjectProperty rdf:about="http://xmlns.com/foaf/0.1/primaryTopicOf"/>
-    
+
 
 
     <!-- https://pleiades.stoa.org/places/vocab#hasFeatureType -->
@@ -931,10 +931,10 @@
         <rdfs:domain rdf:resource="http://lawd.info/ontology/Place"/>
         <rdfs:range rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -942,7 +942,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://betamasaheft.eu/hasTotalLeaves -->
@@ -951,7 +951,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/isAntigraphOf -->
@@ -967,7 +967,7 @@
         <owl:annotatedTarget rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">This is a tag in the Zotero EthioStudies Group library, prefixed bm:</rdfs:comment>
     </owl:Axiom>
-    
+
 
 
     <!-- http://betamasaheft.eu/locusFrom -->
@@ -977,7 +977,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/Locus"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/locusLine -->
@@ -987,7 +987,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/Locus"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/locusTarget -->
@@ -997,7 +997,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/Locus"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/locusTo -->
@@ -1007,7 +1007,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/Locus"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://betamasaheft.eu/roleName -->
@@ -1016,7 +1016,7 @@
         <rdfs:domain rdf:resource="http://betamasaheft.eu/Role"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://lawd.info/ontology/hasCitation -->
@@ -1025,7 +1025,7 @@
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://lawd.info/ontology/primaryForm -->
@@ -1033,7 +1033,7 @@
     <owl:DatatypeProperty rdf:about="http://lawd.info/ontology/primaryForm">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://lawd.info/ontology/variantForm -->
@@ -1041,7 +1041,7 @@
     <owl:DatatypeProperty rdf:about="http://lawd.info/ontology/variantForm">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/contributor -->
@@ -1062,7 +1062,7 @@
         <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/format -->
@@ -1071,7 +1071,7 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/language -->
@@ -1079,7 +1079,7 @@
     <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/language">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/publisher -->
@@ -1100,7 +1100,7 @@
         <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/elements/1.1/title -->
@@ -1121,7 +1121,7 @@
         <rdfs:domain rdf:resource="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
@@ -1135,7 +1135,7 @@
         <owl:annotatedTarget rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment>This is a tag in the Zotero EthioStudies Group library, prefixed bm:</rdfs:comment>
     </owl:Axiom>
-    
+
 
 
     <!-- http://purl.org/dc/terms/source -->
@@ -1159,7 +1159,7 @@
         <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniCirc"/>
         <rdfs:domain rdf:resource="https://w3id.org/sdc/ontology#UniProd"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P2_has_type -->
@@ -1168,7 +1168,7 @@
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts -->
@@ -1176,7 +1176,7 @@
     <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P57_has_number_of_parts">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by -->
@@ -1184,7 +1184,7 @@
     <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P78_is_identified_by">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by -->
@@ -1192,7 +1192,7 @@
     <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P79_beginning_is_qualified_by">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P79_end_is_qualified_by -->
@@ -1201,7 +1201,7 @@
         <rdfs:domain rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/P91_has_unit -->
@@ -1209,7 +1209,7 @@
     <owl:DatatypeProperty rdf:about="http://www.cidoc-crm.org/cidoc-crm/P91_has_unit">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
@@ -1217,7 +1217,7 @@
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
@@ -1225,7 +1225,7 @@
     <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
-    
+
 
 
     <!-- http://www.w3.org/ns/oa#annotatedAt -->
@@ -1234,10 +1234,10 @@
         <rdfs:domain rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -1245,7 +1245,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://betamasaheft.eu/AbrehawaAsbeha -->
@@ -1253,7 +1253,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/AbrehawaAsbeha">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/AcquisitionNote -->
@@ -1261,7 +1261,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/AcquisitionNote">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Admonition -->
@@ -1269,7 +1269,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Admonition">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Advent -->
@@ -1277,7 +1277,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Advent">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Aks -->
@@ -1285,7 +1285,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Aks">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Aksumite -->
@@ -1293,7 +1293,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Aksumite">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/AksumiteStyle -->
@@ -1301,7 +1301,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/AksumiteStyle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Amanuel -->
@@ -1309,7 +1309,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Amanuel">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/AmharicLiterature -->
@@ -1317,7 +1317,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/AmharicLiterature">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Anglican -->
@@ -1325,7 +1325,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Anglican">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Apocrypha -->
@@ -1333,7 +1333,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Apocrypha">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ApocryphaPseudoepigrapha -->
@@ -1341,7 +1341,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ApocryphaPseudoepigrapha">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Arafa -->
@@ -1349,7 +1349,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Arafa">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ArarayMode -->
@@ -1357,7 +1357,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ArarayMode">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Chant_Modes"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Armenian -->
@@ -1365,7 +1365,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Armenian">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Orthodox"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Art_Keywords -->
@@ -1373,7 +1373,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Art_Keywords">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Ashura -->
@@ -1381,7 +1381,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Ashura">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Astamhero -->
@@ -1389,7 +1389,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Astamhero">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Astareeyo -->
@@ -1397,7 +1397,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Astareeyo">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Astasreyo -->
@@ -1405,7 +1405,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Astasreyo">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Aynakwellu -->
@@ -1413,7 +1413,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Aynakwellu">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Ayyamattashriq -->
@@ -1421,7 +1421,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Ayyamattashriq">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/BaalaEgzi -->
@@ -1429,7 +1429,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/BaalaEgzi">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/BaalaNegestu -->
@@ -1437,7 +1437,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/BaalaNegestu">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Baata -->
@@ -1445,7 +1445,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Baata">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/BaataGebs -->
@@ -1453,7 +1453,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/BaataGebs">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Baptism -->
@@ -1461,7 +1461,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Baptism">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Barakaegziena -->
@@ -1469,7 +1469,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Barakaegziena">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Berhan -->
@@ -1477,7 +1477,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Berhan">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Berhansaraqa -->
@@ -1485,7 +1485,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Berhansaraqa">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/BetaEsraelLiterature -->
@@ -1493,7 +1493,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/BetaEsraelLiterature">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/BezuhanMaryam -->
@@ -1501,7 +1501,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/BezuhanMaryam">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Bible -->
@@ -1509,7 +1509,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Bible">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Biography -->
@@ -1517,7 +1517,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Biography">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Book -->
@@ -1525,7 +1525,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Book">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/CNewYear -->
@@ -1533,7 +1533,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/CNewYear">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/CalendaricNote -->
@@ -1541,7 +1541,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/CalendaricNote">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/CanaofGalilee -->
@@ -1549,7 +1549,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/CanaofGalilee">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/CanonLaw -->
@@ -1557,7 +1557,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/CanonLaw">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Catholicism -->
@@ -1565,7 +1565,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Catholicism">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Chant_Modes -->
@@ -1573,7 +1573,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Chant_Modes">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Chants -->
@@ -1581,7 +1581,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Chants">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Christian -->
@@ -1589,7 +1589,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Christian">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Feasts"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ChristianContent -->
@@ -1597,7 +1597,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ChristianContent">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ChristianLiterature -->
@@ -1605,7 +1605,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ChristianLiterature">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Christianity -->
@@ -1613,7 +1613,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Christianity">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ChristmasLedat -->
@@ -1621,7 +1621,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ChristmasLedat">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Chronicles -->
@@ -1629,7 +1629,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Chronicles">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Chronography -->
@@ -1637,7 +1637,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Chronography">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Codex -->
@@ -1645,7 +1645,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Codex">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Colophon -->
@@ -1653,7 +1653,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Colophon">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/CommemorativeNote -->
@@ -1661,7 +1661,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/CommemorativeNote">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Comment -->
@@ -1669,7 +1669,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Comment">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Commentary -->
@@ -1677,7 +1677,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Commentary">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Condemnation -->
@@ -1685,7 +1685,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Condemnation">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Confessions -->
@@ -1693,7 +1693,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Confessions">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Coptic -->
@@ -1701,7 +1701,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Coptic">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Correction -->
@@ -1709,7 +1709,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Correction">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Crucifixion -->
@@ -1717,7 +1717,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Crucifixion">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/CrucifixionSeqlat -->
@@ -1725,7 +1725,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/CrucifixionSeqlat">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/DabraMetmaq -->
@@ -1733,7 +1733,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/DabraMetmaq">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/DabraQwesqwam -->
@@ -1741,7 +1741,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/DabraQwesqwam">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/DabraSeyon -->
@@ -1749,7 +1749,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/DabraSeyon">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/DabraTabor -->
@@ -1757,7 +1757,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/DabraTabor">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/DabraZayt -->
@@ -1765,7 +1765,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/DabraZayt">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Daqseyos -->
@@ -1773,7 +1773,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Daqseyos">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Documents -->
@@ -1781,7 +1781,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Documents">
         <rdfs:comment xml:lang="en">A document or addition in the Beta maṣāḥǝft data.</rdfs:comment>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/DonationNote -->
@@ -1789,7 +1789,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/DonationNote">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Doxology -->
@@ -1797,7 +1797,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Doxology">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/EOTC -->
@@ -1805,7 +1805,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/EOTC">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Easter -->
@@ -1813,7 +1813,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Easter">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Erafta -->
@@ -1821,7 +1821,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Erafta">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Ergata -->
@@ -1829,7 +1829,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Ergata">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Ethiopian -->
@@ -1837,7 +1837,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Ethiopian">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Excerpt -->
@@ -1845,7 +1845,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Excerpt">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Excommunication -->
@@ -1853,7 +1853,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Excommunication">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Exhortation -->
@@ -1861,7 +1861,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Exhortation">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/EzelMode -->
@@ -1869,7 +1869,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/EzelMode">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Chant_Modes"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Feasts -->
@@ -1877,7 +1877,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Feasts">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Felsata -->
@@ -1885,7 +1885,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Felsata">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Fiction -->
@@ -1893,7 +1893,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Fiction">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/FirstGondarineStyle -->
@@ -1901,7 +1901,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/FirstGondarineStyle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/FirstSolomonicStyle -->
@@ -1909,7 +1909,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/FirstSolomonicStyle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/FlightintoEgypt -->
@@ -1917,7 +1917,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/FlightintoEgypt">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Foundation -->
@@ -1925,7 +1925,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Foundation">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/FoundationCharter -->
@@ -1933,7 +1933,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/FoundationCharter">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Ganna -->
@@ -1941,7 +1941,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Ganna">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/GeezMode -->
@@ -1949,7 +1949,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/GeezMode">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Chant_Modes"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Genealogy -->
@@ -1957,7 +1957,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Genealogy">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Gezrat -->
@@ -1965,7 +1965,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Gezrat">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Gloss -->
@@ -1973,7 +1973,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Gloss">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/GoldenGospel -->
@@ -1981,7 +1981,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/GoldenGospel">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/special_mss"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Gon -->
@@ -1989,7 +1989,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Gon">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Greek -->
@@ -1997,7 +1997,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Greek">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Orthodox"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/GuarantorsList -->
@@ -2005,7 +2005,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/GuarantorsList">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Gubaeqana -->
@@ -2013,7 +2013,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Gubaeqana">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/GuestText -->
@@ -2021,7 +2021,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/GuestText">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Gurage -->
@@ -2029,7 +2029,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Gurage">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Hagiography -->
@@ -2037,7 +2037,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Hagiography">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Hanna -->
@@ -2045,7 +2045,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Hanna">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Hanukkah -->
@@ -2053,7 +2053,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Hanukkah">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Headband -->
@@ -2061,7 +2061,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Headband">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/HistoryAndHistoriography -->
@@ -2069,7 +2069,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/HistoryAndHistoriography">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Homily -->
@@ -2077,7 +2077,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Homily">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/INewYear -->
@@ -2085,7 +2085,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/INewYear">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Idaladha -->
@@ -2093,7 +2093,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Idaladha">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Idalfitr -->
@@ -2101,7 +2101,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Idalfitr">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Inscription -->
@@ -2109,7 +2109,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Inscription">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Inventory -->
@@ -2117,7 +2117,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Inventory">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Invocation -->
@@ -2125,7 +2125,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Invocation">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Islam -->
@@ -2133,7 +2133,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Islam">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Islamic -->
@@ -2141,7 +2141,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Islamic">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Feasts"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/IslamicLiterature -->
@@ -2149,7 +2149,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/IslamicLiterature">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/JNewYear -->
@@ -2157,7 +2157,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/JNewYear">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Jewish -->
@@ -2165,7 +2165,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Jewish">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Feasts"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Judaism -->
@@ -2173,7 +2173,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Judaism">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Koran -->
@@ -2181,7 +2181,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Koran">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/LandGrant -->
@@ -2189,7 +2189,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/LandGrant">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/LaylatalBaraat -->
@@ -2197,7 +2197,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/LaylatalBaraat">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Laylatalqadr -->
@@ -2205,7 +2205,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Laylatalqadr">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Leaf -->
@@ -2213,7 +2213,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Leaf">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Lebbamedr -->
@@ -2221,7 +2221,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Lebbamedr">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Lectionary -->
@@ -2229,7 +2229,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Lectionary">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/LegalDocument -->
@@ -2237,7 +2237,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/LegalDocument">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Leporello -->
@@ -2245,7 +2245,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Leporello">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Letter -->
@@ -2253,7 +2253,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Letter">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Liturgy -->
@@ -2261,7 +2261,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Liturgy">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Locus -->
@@ -2269,7 +2269,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Locus">
         <rdfs:comment xml:lang="en">The placement of a unit, feature, part, component of a manuscript with reference to the foliation</rdfs:comment>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/LongCycle -->
@@ -2277,13 +2277,13 @@
     <owl:Class rdf:about="http://betamasaheft.eu/LongCycle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/MScomponents -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/MScomponents"/>
-    
+
 
 
     <!-- http://betamasaheft.eu/Mabraq -->
@@ -2291,7 +2291,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Mabraq">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/MadhaneAlam -->
@@ -2299,7 +2299,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/MadhaneAlam">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Maedot -->
@@ -2307,7 +2307,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Maedot">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Maerar -->
@@ -2315,7 +2315,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Maerar">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Magic -->
@@ -2323,7 +2323,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Magic">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/MagicFormula -->
@@ -2331,7 +2331,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/MagicFormula">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/MagicText -->
@@ -2339,7 +2339,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/MagicText">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/MalkeHymn -->
@@ -2347,7 +2347,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/MalkeHymn">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/MaryamSeyon -->
@@ -2355,7 +2355,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/MaryamSeyon">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Masqal -->
@@ -2363,13 +2363,13 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Masqal">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Material -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/Material"/>
-    
+
 
 
     <!-- http://betamasaheft.eu/Mawlid -->
@@ -2377,7 +2377,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Mawlid">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Medicine -->
@@ -2385,7 +2385,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Medicine">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Miracle -->
@@ -2393,7 +2393,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Miracle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Miscellanea -->
@@ -2401,7 +2401,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Miscellanea">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Missal -->
@@ -2409,7 +2409,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Missal">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/MoPe -->
@@ -2417,7 +2417,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/MoPe">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ModernStyle -->
@@ -2425,7 +2425,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ModernStyle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/MonasticLiterature -->
@@ -2433,7 +2433,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/MonasticLiterature">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/NativityofMary -->
@@ -2441,7 +2441,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/NativityofMary">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/NaturalSciences -->
@@ -2449,7 +2449,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/NaturalSciences">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/NewTestament -->
@@ -2457,7 +2457,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/NewTestament">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Nineveh -->
@@ -2465,7 +2465,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Nineveh">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Objects_and_Animals -->
@@ -2473,7 +2473,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Objects_and_Animals">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Occupation -->
@@ -2481,7 +2481,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Occupation">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/OldTestament -->
@@ -2489,7 +2489,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/OldTestament">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Oromo -->
@@ -2497,7 +2497,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Oromo">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Orthodox -->
@@ -2505,7 +2505,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Orthodox">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Other -->
@@ -2515,7 +2515,7 @@
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/OwnershipNote -->
@@ -2523,7 +2523,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/OwnershipNote">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Paks1 -->
@@ -2531,7 +2531,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Paks1">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Paks2 -->
@@ -2539,7 +2539,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Paks2">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/PalmSunday -->
@@ -2547,7 +2547,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/PalmSunday">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Passage -->
@@ -2555,7 +2555,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Passage">
         <rdfs:comment xml:lang="en">A passage of a text or transcription in Beta maṣāḥǝft</rdfs:comment>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Passover -->
@@ -2563,7 +2563,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Passover">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Pentecost -->
@@ -2571,7 +2571,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Pentecost">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Periods -->
@@ -2579,7 +2579,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Periods">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Philosophy -->
@@ -2587,7 +2587,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Philosophy">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Photograph -->
@@ -2595,7 +2595,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Photograph">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Place -->
@@ -2603,7 +2603,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Place">
         <rdfs:comment xml:lang="en">A place in Ethiopia registered in Beta maṣāḥǝft</rdfs:comment>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Place_types -->
@@ -2611,7 +2611,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Place_types">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Poem -->
@@ -2619,7 +2619,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Poem">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/PoemArke -->
@@ -2627,7 +2627,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/PoemArke">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/PoemQene -->
@@ -2635,7 +2635,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/PoemQene">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/PoemSalam -->
@@ -2643,7 +2643,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/PoemSalam">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Poetry -->
@@ -2651,7 +2651,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Poetry">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/PostGondarineStyle -->
@@ -2659,7 +2659,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/PostGondarineStyle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Prayers -->
@@ -2667,7 +2667,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Prayers">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ProtectivePrayer -->
@@ -2675,7 +2675,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ProtectivePrayer">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Protestantism -->
@@ -2683,7 +2683,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Protestantism">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christianity"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Pseudoepigrapha -->
@@ -2691,7 +2691,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Pseudoepigrapha">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/PurchaseNote -->
@@ -2699,7 +2699,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/PurchaseNote">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Purim -->
@@ -2707,7 +2707,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Purim">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Qedameseur -->
@@ -2715,7 +2715,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Qedameseur">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Qeddasebeta -->
@@ -2723,7 +2723,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Qeddasebeta">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Ramadan -->
@@ -2731,7 +2731,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Ramadan">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islamic"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ReceiptNote -->
@@ -2739,7 +2739,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ReceiptNote">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Record -->
@@ -2747,7 +2747,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Record">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/RecordDistribution -->
@@ -2755,7 +2755,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/RecordDistribution">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/RecordGuarantors -->
@@ -2763,7 +2763,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/RecordGuarantors">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/RecordLitigation -->
@@ -2771,7 +2771,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/RecordLitigation">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/RecordReconciliation -->
@@ -2779,7 +2779,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/RecordReconciliation">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/RecordTransaction -->
@@ -2787,7 +2787,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/RecordTransaction">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Religion -->
@@ -2795,7 +2795,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Religion">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Rituals -->
@@ -2803,7 +2803,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Rituals">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/RitualsAndRites -->
@@ -2811,7 +2811,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/RitualsAndRites">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Role -->
@@ -2819,7 +2819,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Role">
         <rdfs:comment xml:lang="en">Role attested with a personal name</rdfs:comment>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Russian -->
@@ -2827,7 +2827,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Russian">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Orthodox"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Sawit -->
@@ -2835,7 +2835,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Sawit">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ScribalNoteAssigningLang -->
@@ -2843,7 +2843,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteAssigningLang">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ScribalNoteBequeathing -->
@@ -2851,7 +2851,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteBequeathing">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ScribalNoteCommencing -->
@@ -2859,7 +2859,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteCommencing">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ScribalNoteCommissioning -->
@@ -2867,7 +2867,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteCommissioning">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ScribalNoteCompleting -->
@@ -2875,7 +2875,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteCompleting">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ScribalNoteOrdering -->
@@ -2883,7 +2883,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ScribalNoteOrdering">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ScribalSignature -->
@@ -2891,7 +2891,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ScribalSignature">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ScribalSupplication -->
@@ -2899,7 +2899,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ScribalSupplication">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Scroll -->
@@ -2907,7 +2907,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Scroll">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/mss"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/SecondGondarineStyle -->
@@ -2915,7 +2915,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/SecondGondarineStyle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/SecondSolomonicStyle -->
@@ -2923,7 +2923,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/SecondSolomonicStyle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Seddat -->
@@ -2931,7 +2931,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Seddat">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Shavuot -->
@@ -2939,7 +2939,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Shavuot">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Shia -->
@@ -2947,7 +2947,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Shia">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islam"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ShortCycle -->
@@ -2955,7 +2955,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ShortCycle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/StampExlibris -->
@@ -2963,7 +2963,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/StampExlibris">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Subjects -->
@@ -2971,7 +2971,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Subjects">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Subscription -->
@@ -2979,7 +2979,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Subscription">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Sunni -->
@@ -2987,7 +2987,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Sunni">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Islam"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Supplication -->
@@ -2995,7 +2995,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Supplication">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Syriac -->
@@ -3003,7 +3003,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Syriac">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Orthodox"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Tabernacles -->
@@ -3011,7 +3011,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Tabernacles">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Tadewos -->
@@ -3019,7 +3019,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Tadewos">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Tailband -->
@@ -3027,7 +3027,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Tailband">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Tentasomaledat -->
@@ -3035,7 +3035,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Tentasomaledat">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Tesbeet -->
@@ -3043,7 +3043,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Tesbeet">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Theology -->
@@ -3051,7 +3051,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Theology">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ThirdSolomonicStyle -->
@@ -3059,7 +3059,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ThirdSolomonicStyle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/TigrinyaLiterature -->
@@ -3067,7 +3067,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/TigrinyaLiterature">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Tomas -->
@@ -3075,7 +3075,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Tomas">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Christian"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Traditional -->
@@ -3083,7 +3083,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Traditional">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/TransactionNote -->
@@ -3091,7 +3091,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/TransactionNote">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Translation -->
@@ -3099,7 +3099,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Translation">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Unclear -->
@@ -3107,7 +3107,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Unclear">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Documents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Vocabulary -->
@@ -3115,7 +3115,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Vocabulary">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Subjects"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/Yomkippur -->
@@ -3123,7 +3123,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/Yomkippur">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Jewish"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ZaMa -->
@@ -3131,7 +3131,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ZaMa">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Periods"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/academic -->
@@ -3139,7 +3139,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/academic">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/academicInstitution -->
@@ -3147,7 +3147,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/academicInstitution">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/addition -->
@@ -3155,7 +3155,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/addition">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/administrativeUnit -->
@@ -3163,7 +3163,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/administrativeUnit">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/alabaster -->
@@ -3171,7 +3171,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/alabaster">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/amba -->
@@ -3179,7 +3179,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/amba">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/angel -->
@@ -3187,7 +3187,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/angel">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/animal -->
@@ -3195,7 +3195,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/animal">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/arch -->
@@ -3203,7 +3203,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/arch">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/archaeologicalSite -->
@@ -3211,7 +3211,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/archaeologicalSite">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/architecture -->
@@ -3219,7 +3219,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/architecture">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/area -->
@@ -3227,7 +3227,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/area">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/art -->
@@ -3235,7 +3235,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/art">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/attribute -->
@@ -3243,13 +3243,13 @@
     <owl:Class rdf:about="http://betamasaheft.eu/attribute">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/auth -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/auth"/>
-    
+
 
 
     <!-- http://betamasaheft.eu/awragga -->
@@ -3257,7 +3257,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/awragga">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/bay -->
@@ -3265,7 +3265,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/bay">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/bearded -->
@@ -3273,7 +3273,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/bearded">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/beardless -->
@@ -3281,7 +3281,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/beardless">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/binding -->
@@ -3289,7 +3289,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/binding">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/bird -->
@@ -3297,7 +3297,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/bird">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/bronze -->
@@ -3305,7 +3305,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/bronze">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/cape -->
@@ -3313,7 +3313,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/cape">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/cardboard -->
@@ -3321,7 +3321,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/cardboard">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/castle -->
@@ -3329,7 +3329,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/castle">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/cataract -->
@@ -3337,7 +3337,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/cataract">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/cave -->
@@ -3345,7 +3345,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/cave">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/censer -->
@@ -3353,7 +3353,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/censer">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/chapel -->
@@ -3361,7 +3361,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/chapel">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/church -->
@@ -3370,7 +3370,7 @@
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/city -->
@@ -3378,7 +3378,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/city">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/codex -->
@@ -3386,7 +3386,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/codex">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/column -->
@@ -3394,7 +3394,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/column">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/country -->
@@ -3402,7 +3402,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/country">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/cross -->
@@ -3410,7 +3410,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/cross">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/curtain -->
@@ -3418,7 +3418,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/curtain">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/dabr -->
@@ -3426,7 +3426,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/dabr">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/dam -->
@@ -3434,7 +3434,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/dam">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/deadjesus -->
@@ -3442,7 +3442,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/deadjesus">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/decoration -->
@@ -3450,7 +3450,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/decoration">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/desert -->
@@ -3458,7 +3458,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/desert">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/district -->
@@ -3466,7 +3466,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/district">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/donordepiction -->
@@ -3474,7 +3474,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/donordepiction">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/dragon -->
@@ -3482,7 +3482,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/dragon">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ecclesiastic -->
@@ -3490,7 +3490,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ecclesiastic">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/emirate -->
@@ -3498,7 +3498,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/emirate">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/emptycross -->
@@ -3506,7 +3506,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/emptycross">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/eucharist -->
@@ -3514,7 +3514,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/eucharist">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/falls -->
@@ -3522,7 +3522,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/falls">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/farm -->
@@ -3530,7 +3530,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/farm">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/forest -->
@@ -3538,7 +3538,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/forest">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/fort -->
@@ -3546,7 +3546,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/fort">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/gadam -->
@@ -3554,7 +3554,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/gadam">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/gatar -->
@@ -3562,7 +3562,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/gatar">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/gesture -->
@@ -3570,7 +3570,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/gesture">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/gestureblessing -->
@@ -3578,7 +3578,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/gestureblessing">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/gesturegrief -->
@@ -3586,7 +3586,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/gesturegrief">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/gestureorans -->
@@ -3594,7 +3594,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/gestureorans">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/gesturewitnessing -->
@@ -3602,7 +3602,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/gesturewitnessing">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/gorge -->
@@ -3610,7 +3610,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/gorge">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/gulf -->
@@ -3618,7 +3618,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/gulf">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/halo -->
@@ -3626,7 +3626,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/halo">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/hand -->
@@ -3634,7 +3634,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/hand">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/hodegetria -->
@@ -3642,13 +3642,13 @@
     <owl:Class rdf:about="http://betamasaheft.eu/hodegetria">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ins -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/ins"/>
-    
+
 
 
     <!-- http://betamasaheft.eu/interlace -->
@@ -3656,7 +3656,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/interlace">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/island -->
@@ -3664,7 +3664,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/island">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/katama -->
@@ -3672,7 +3672,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/katama">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/kingdom -->
@@ -3680,7 +3680,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/kingdom">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/lake -->
@@ -3688,7 +3688,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/lake">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/layout -->
@@ -3696,7 +3696,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/layout">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/leather -->
@@ -3704,7 +3704,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/leather">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/library -->
@@ -3712,7 +3712,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/library">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/literary -->
@@ -3720,7 +3720,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/literary">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/livingjesus -->
@@ -3728,7 +3728,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/livingjesus">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/mandorla -->
@@ -3736,7 +3736,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/mandorla">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/market -->
@@ -3744,7 +3744,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/market">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/medical -->
@@ -3752,7 +3752,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/medical">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/metal -->
@@ -3760,7 +3760,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/metal">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/military -->
@@ -3768,7 +3768,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/military">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/miniatureCollection -->
@@ -3776,7 +3776,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/miniatureCollection">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/special_mss"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/monastery -->
@@ -3784,7 +3784,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/monastery">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/mosque -->
@@ -3792,7 +3792,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/mosque">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/mountain -->
@@ -3800,7 +3800,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/mountain">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/msfrag -->
@@ -3808,7 +3808,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/msfrag">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/msitem -->
@@ -3816,7 +3816,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/msitem">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/mspart -->
@@ -3824,13 +3824,13 @@
     <owl:Class rdf:about="http://betamasaheft.eu/mspart">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/mss -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/mss"/>
-    
+
 
 
     <!-- http://betamasaheft.eu/museum -->
@@ -3838,13 +3838,13 @@
     <owl:Class rdf:about="http://betamasaheft.eu/museum">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/nar -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/nar"/>
-    
+
 
 
     <!-- http://betamasaheft.eu/notSpecified -->
@@ -3852,7 +3852,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/notSpecified">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Confessions"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/oasis -->
@@ -3860,7 +3860,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/oasis">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/other -->
@@ -3868,7 +3868,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/other">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/paper -->
@@ -3876,7 +3876,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/paper">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/papyrus -->
@@ -3884,7 +3884,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/papyrus">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/parchment -->
@@ -3892,7 +3892,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/parchment">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/pass -->
@@ -3900,7 +3900,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/pass">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/peninsula -->
@@ -3908,13 +3908,13 @@
     <owl:Class rdf:about="http://betamasaheft.eu/peninsula">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/pers -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/pers"/>
-    
+
 
 
     <!-- http://betamasaheft.eu/plain -->
@@ -3922,7 +3922,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/plain">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/planet -->
@@ -3930,7 +3930,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/planet">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/plateau -->
@@ -3938,7 +3938,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/plateau">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/political -->
@@ -3946,7 +3946,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/political">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/port -->
@@ -3954,7 +3954,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/port">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/post -->
@@ -3962,7 +3962,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/post">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/qabale -->
@@ -3970,7 +3970,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/qabale">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/quarter -->
@@ -3978,7 +3978,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/quarter">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/quire -->
@@ -3986,7 +3986,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/quire">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/MScomponents"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/qushat -->
@@ -3994,7 +3994,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/qushat">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/region -->
@@ -4002,7 +4002,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/region">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/religiousSite -->
@@ -4010,7 +4010,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/religiousSite">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/river -->
@@ -4018,7 +4018,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/river">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/rockSite -->
@@ -4026,7 +4026,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/rockSite">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/ruler -->
@@ -4034,7 +4034,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/ruler">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Occupation"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/saluspopuli -->
@@ -4042,7 +4042,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/saluspopuli">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/scroll -->
@@ -4050,7 +4050,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/scroll">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/sea -->
@@ -4058,7 +4058,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/sea">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/seated -->
@@ -4066,7 +4066,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/seated">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/settlement -->
@@ -4074,7 +4074,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/settlement">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/shield -->
@@ -4082,7 +4082,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/shield">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/shrine -->
@@ -4090,7 +4090,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/shrine">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/silk -->
@@ -4098,7 +4098,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/silk">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/site -->
@@ -4106,7 +4106,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/site">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/spear -->
@@ -4114,7 +4114,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/spear">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/special_mss -->
@@ -4122,7 +4122,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/special_mss">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/auth"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/sponge -->
@@ -4130,7 +4130,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/sponge">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/spring -->
@@ -4138,7 +4138,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/spring">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/standing -->
@@ -4146,7 +4146,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/standing">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/state -->
@@ -4154,7 +4154,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/state">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/station -->
@@ -4162,7 +4162,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/station">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/stone -->
@@ -4170,7 +4170,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/stone">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/strait -->
@@ -4178,7 +4178,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/strait">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/sultanate -->
@@ -4186,7 +4186,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/sultanate">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/sunandmoon -->
@@ -4194,7 +4194,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/sunandmoon">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/sword -->
@@ -4202,7 +4202,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/sword">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/tabiya -->
@@ -4210,7 +4210,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/tabiya">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/temple -->
@@ -4218,7 +4218,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/temple">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/tetramorph -->
@@ -4226,7 +4226,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/tetramorph">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/textile -->
@@ -4234,7 +4234,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/textile">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/town -->
@@ -4242,7 +4242,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/town">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/twothieves -->
@@ -4250,7 +4250,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/twothieves">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Art_Keywords"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/valley -->
@@ -4258,7 +4258,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/valley">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/vestment -->
@@ -4266,7 +4266,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/vestment">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Objects_and_Animals"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/volcano -->
@@ -4274,7 +4274,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/volcano">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/wadi -->
@@ -4282,7 +4282,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/wadi">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/warada -->
@@ -4290,7 +4290,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/warada">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/well -->
@@ -4298,7 +4298,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/well">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/wood -->
@@ -4306,13 +4306,13 @@
     <owl:Class rdf:about="http://betamasaheft.eu/wood">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Material"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/work -->
 
     <owl:Class rdf:about="http://betamasaheft.eu/work"/>
-    
+
 
 
     <!-- http://betamasaheft.eu/zoba -->
@@ -4320,7 +4320,7 @@
     <owl:Class rdf:about="http://betamasaheft.eu/zoba">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://betamasaheft.eu/zone -->
@@ -4328,64 +4328,64 @@
     <owl:Class rdf:about="http://betamasaheft.eu/zone">
         <rdfs:subClassOf rdf:resource="http://betamasaheft.eu/Place_types"/>
     </owl:Class>
-    
+
 
 
     <!-- http://lawd.info/ontology/AssembledWork -->
 
     <owl:Class rdf:about="http://lawd.info/ontology/AssembledWork"/>
-    
+
 
 
     <!-- http://lawd.info/ontology/Person -->
 
     <owl:Class rdf:about="http://lawd.info/ontology/Person"/>
-    
+
 
 
     <!-- http://lawd.info/ontology/Place -->
 
     <owl:Class rdf:about="http://lawd.info/ontology/Place"/>
-    
+
 
 
     <!-- http://lawd.info/ontology/WrittenWork -->
 
     <owl:Class rdf:about="http://lawd.info/ontology/WrittenWork"/>
-    
+
 
 
     <!-- http://pelagios.github.io/vocab/terms#AnnotatedThing -->
 
     <owl:Class rdf:about="http://pelagios.github.io/vocab/terms#AnnotatedThing"/>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/E42_Identifier -->
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/E52_Time-span -->
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E52_Time-span"/>
-    
+
 
 
     <!-- http://www.cidoc-crm.org/cidoc-crm/E54_Dimension -->
 
     <owl:Class rdf:about="http://www.cidoc-crm.org/cidoc-crm/E54_Dimension"/>
-    
+
 
 
     <!-- http://www.w3.org/ns/oa#Annotation -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/oa#Annotation"/>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -4393,7 +4393,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
+
 
 
     <!-- http://betamasaheft.eu/ -->
@@ -4402,10 +4402,10 @@
         <dc:publisher>Akademie der Wissenschaften Hamburg</dc:publisher>
         <dc:title>Beta Maṣāḥǝft</dc:title>
     </owl:NamedIndividual>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Annotations
@@ -4416,10 +4416,10 @@
     <rdf:Description rdf:about="http://betamasaheft.eu/hasTotalLeaves">
         <rdfs:comment>The total number of leaves in a manuscript.</rdfs:comment>
     </rdf:Description>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -4463,4 +4463,3 @@
 
 
 <!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
-
