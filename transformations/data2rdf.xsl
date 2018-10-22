@@ -65,6 +65,7 @@
                                 
                                 <xsl:choose>
                                     <xsl:when test="starts-with($anchor, 'ms')">msitem</xsl:when>
+                                    <xsl:when test="starts-with($anchor, 't')">title</xsl:when>
                                 <xsl:when test="starts-with($anchor, 'q')">quire</xsl:when>
                                 <xsl:when test="starts-with($anchor, 'h')">hand</xsl:when>
                                 <xsl:when test="starts-with($anchor, 'b')">binding</xsl:when>
@@ -210,7 +211,11 @@
                     <rdf:type rdf:resource="http://lawd.info/ontology/ConceptualWork"/>
                     <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
                     <xsl:apply-templates select="//t:listBibl[@type = 'clavis']"/>
-                    <xsl:apply-templates select="//t:titleStmt/t:title"/>
+                    <xsl:apply-templates select="//t:titleStmt/t:title">
+                        <xsl:with-param name="mainID">
+                            <xsl:value-of select="$mainID"/>
+                        </xsl:with-param>
+                    </xsl:apply-templates>
                     <xsl:apply-templates select="//t:witness"/>
                 </xsl:if>
                 <xsl:if test="@type = 'place' or @type = 'ins'">
@@ -390,7 +395,8 @@
         <xsl:apply-templates select="preceding-sibling::t:msIdentifier"/>
         <xsl:apply-templates select="descendant::t:extent"/>
         <xsl:apply-templates select="descendant::t:objectDesc//t:material[@key]"/>
-        <xsl:apply-templates select="descendant::t:objectDesc//t:objectType[@key]"/>
+        <xsl:apply-templates select="descendant::t:objectDesc//t:objectType[@ref]"/>
+        <xsl:apply-templates select="descendant::t:rs[@type='execution'][@ref]"/>
         <xsl:apply-templates select="descendant::t:objectDesc[@form]"/>
         <xsl:apply-templates select="descendant::t:origDate"/>
 <!--        hands -->
@@ -1116,12 +1122,20 @@
 
 
     <xsl:template match="t:title">
+        <xsl:param name="mainID"/>
         <dc:title>
             <xsl:if test="@xml:lang">
                 <xsl:copy-of select="@xml:lang"/>
             </xsl:if>
             <xsl:value-of select="."/>
         </dc:title>
+        <xsl:if test="@xml:id">
+            <crm:P102_has_title rdf:resource="{funct:id(concat($mainID, '#',@xml:id))}">
+            <xsl:if test="@xml:lang">
+                <xsl:copy-of select="@xml:lang"/>
+            </xsl:if>
+            </crm:P102_has_title>
+        </xsl:if>
     </xsl:template>
 
     <xsl:template match="t:placeName" mode="pn">
