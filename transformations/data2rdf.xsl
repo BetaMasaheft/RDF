@@ -1,30 +1,30 @@
 <xsl:stylesheet 
-    xmlns:pleiades="https://pleiades.stoa.org/" 
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#" 
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-    xmlns:bm="https://betamasaheft.eu/" 
-    xmlns:wd="https://www.wikidata.org/" 
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" 
-    xmlns:oa="http://www.w3.org/ns/oa#" 
-    xmlns:rel="http://purl.org/vocab/relationship/" 
-    xmlns:dcterms="http://purl.org/dc/terms/" 
-    xmlns:pelagios="http://pelagios.github.io/vocab/terms#" 
-    xmlns:syriaca="http://syriaca.org/documentation/relations.html#" 
-    xmlns:foaf="http://xmlns.com/foaf/0.1/" 
-    xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/" 
-    xmlns:saws="http://purl.org/saws/ontology#" 
-    xmlns:iha="http://islhornafr.tors.sc.ku.dk/" 
-    xmlns:funct="http://myfunction" 
-    xmlns:gn="http://www.geonames.org/ontology#" 
-    xmlns:agrelon="http://d-nb.info/standards/elementset/agrelon.owl#" 
-    xmlns:lawd="http://lawd.info/ontology/" 
-    xmlns:sdc="https://w3id.org/sdc/ontology#" 
-    xmlns:t="http://www.tei-c.org/ns/1.0" 
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
-    xmlns:ecrm="http://erlangen-crm.org/current/" 
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" 
-    xmlns:snap="http://data.snapdrgn.net/ontology/snap#" 
+    xmlns:pleiades="https://pleiades.stoa.org/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:bm="https://betamasaheft.eu/"
+    xmlns:wd="https://www.wikidata.org/"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:oa="http://www.w3.org/ns/oa#"
+    xmlns:rel="http://purl.org/vocab/relationship/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:pelagios="http://pelagios.github.io/vocab/terms#"
+    xmlns:syriaca="http://syriaca.org/documentation/relations.html#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:crm="http://www.cidoc-crm.org/cidoc-crm/"
+    xmlns:saws="http://purl.org/saws/ontology#"
+    xmlns:iha="http://islhornafr.tors.sc.ku.dk/"
+    xmlns:funct="http://myfunction"
+    xmlns:gn="http://www.geonames.org/ontology#"
+    xmlns:agrelon="http://d-nb.info/standards/elementset/agrelon.owl#"
+    xmlns:lawd="http://lawd.info/ontology/"
+    xmlns:sdc="https://w3id.org/sdc/ontology#"
+    xmlns:t="http://www.tei-c.org/ns/1.0"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:ecrm="http://erlangen-crm.org/current/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:snap="http://data.snapdrgn.net/ontology/snap#"
     xmlns:dc="http://purl.org/dc/elements/1.1/" exclude-result-prefixes="funct" version="2.0">
     <xsl:output method="xml" indent="yes" encoding="UTF-8"/>
     <xsl:function name="funct:date">
@@ -92,7 +92,7 @@
                             <xsl:variable name="mainPart" select="substring-before($id,'#')"/>
                             <xsl:variable name="anchor" select="substring-after($id,'#')"/>
                             <xsl:variable name="type">
-                                
+
                                 <xsl:choose>
                                     <xsl:when test="starts-with($anchor, 'ms')">msitem</xsl:when>
                                     <xsl:when test="starts-with($anchor, 't')">title</xsl:when>
@@ -133,7 +133,7 @@
                                 </xsl:when>
                             <xsl:otherwise>part</xsl:otherwise>
                                 </xsl:choose>
-                                
+
                             </xsl:variable>
                             <xsl:value-of select="concat($mainPart, '/', $type, '/', $anchor)"/>
                         </xsl:when>
@@ -210,7 +210,7 @@
                     </xsl:apply-templates>
                     <xsl:choose>
                         <!--                        if the manuscript has parts, count them and add a pointer to them, a further call below will call the template in mode="parturis" producing the uris to which this will refer
-                        if there are parts 
+                        if there are parts
                         -->
                         <xsl:when test="//t:msDesc/t:msPart or //t:msDesc/t:msFrag">
                             <crm:P57_has_number_of_parts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">
@@ -315,7 +315,7 @@
             <!--            independent annotations relating entities -->
 
             <!--            general -->
-            <!--            for each relation in the TEI document, whereever it occurs it will print a RDF:Description with one property called by the @name of the relation 
+            <!--            for each relation in the TEI document, whereever it occurs it will print a RDF:Description with one property called by the @name of the relation
             this does not need to pass on the main id as a parameter because that will be in attributed stated in the relation
             -->
             <xsl:apply-templates select="//t:relation">
@@ -338,7 +338,7 @@
                     <xsl:with-param name="passage">
                         <xsl:if test="ancestor::t:ab">
                             <xsl:if test="ancestor::t:*[@n][1]/ancestor::t:*[@n][name() != 'lb'][1]">
-                                
+
                                 <xsl:value-of select="string(ancestor::t:*[@n][name() != 'lb'][1]/ancestor::t:*[@n][name() != 'lb'][1]/@n)"/>
                                 <xsl:text>.</xsl:text>
                             </xsl:if>
@@ -350,7 +350,7 @@
                             <xsl:when test="//t:titleStmt/t:title[@type='short']">
                                 <xsl:value-of select="//t:titleStmt/t:title[@type='short']"/>
                             </xsl:when>
-                            
+
                             <xsl:otherwise>
                                 <xsl:choose>
                                     <xsl:when test="//t:titleStmt/t:title[@type='main']">
@@ -365,9 +365,9 @@
                     </xsl:with-param>
                 </xsl:call-template>
             </xsl:for-each>
-            
+
             <xsl:for-each select="//t:persName[@ref[. != 'PRS00000']][not(parent::t:person)][not(ancestor::t:place)][not(ancestor::t:respStmt)]">
-                
+
                 <xsl:sort select="position()"/>
                 <xsl:call-template name="persons">
                     <xsl:with-param name="mainID">
@@ -379,7 +379,7 @@
                     <xsl:with-param name="passage">
                         <xsl:if test="ancestor::t:ab">
                             <xsl:if test="ancestor::t:*[@n][1]/ancestor::t:*[@n][name() != 'lb'][1]">
-                                
+
                                 <xsl:value-of select="string(ancestor::t:*[@n][name() != 'lb'][1]/ancestor::t:*[@n][name() != 'lb'][1]/@n)"/>
                                 <xsl:text>.</xsl:text>
                             </xsl:if>
@@ -391,7 +391,7 @@
                             <xsl:when test="//t:titleStmt/t:title[@type='short']">
                                 <xsl:value-of select="//t:titleStmt/t:title[@type='short']"/>
                             </xsl:when>
-                           
+
                             <xsl:otherwise>
                                 <xsl:choose>
                                     <xsl:when test="//t:titleStmt/t:title[@type='main']">
@@ -417,8 +417,8 @@
                     </xsl:with-param>
                 </xsl:apply-templates>
             </xsl:if>
-            
-            
+
+
                 <!--            entity type specific independent annotations with uris -->
                 <xsl:if test="@type = 'work'">
                     <!--                only call templates for direct children of div[edition]-->
@@ -427,9 +427,9 @@
                             <xsl:value-of select="$mainID"/>
                         </xsl:with-param>
                     </xsl:apply-templates>
-                
 
-               
+
+
             </xsl:if>
 
         </rdf:RDF>
@@ -475,14 +475,14 @@
                 <xsl:value-of select="$mainID"/>
             </xsl:with-param>
         </xsl:apply-templates>
-        
+
         <!--       decorations -->
         <xsl:apply-templates select="descendant::t:decoNote[ancestor::t:decoDesc]">
             <xsl:with-param name="mainID">
                 <xsl:value-of select="$mainID"/>
             </xsl:with-param>
         </xsl:apply-templates>
-        
+
         <!--       binding -->
         <xsl:apply-templates select="descendant::t:decoNote[ancestor::t:bindingDesc]">
             <xsl:with-param name="mainID">
@@ -639,7 +639,7 @@
             <xsl:attribute name="rdf:about">
                 <xsl:value-of select="concat('https://betamasaheft.eu/', $mainID, '/addition/', @xml:id)"/>
             </xsl:attribute>
-            
+
             <rdf:type rdf:resource="https://betamasaheft.eu/addition"/>
             <rdf:type rdf:resource="https://w3id.org/sdc/ontology#UniCont"/>
             <xsl:if test="t:desc[@type]">
@@ -653,7 +653,7 @@
             <xsl:apply-templates select="descendant::t:date"/>
             <xsl:apply-templates select="descendant::t:persName[@ref]"/>
             <xsl:apply-templates select="descendant::t:ref[@type]"/>
-            <xsl:apply-templates select="t:locus"/> 
+            <xsl:apply-templates select="t:locus"/>
             <xsl:apply-templates select="@corresp">
                 <xsl:with-param name="mainID">
                     <xsl:value-of select="$mainID"/>
@@ -671,11 +671,11 @@
                 <xsl:with-param name="name"><xsl:value-of select="if(current()/parent::t:list/parent::t:additions) then 'ADD' else if (current()/parent::t:list/parent::t:collation) then 'COL' else if (current()/parent::t:list/parent::t:foliation) then 'FOL' else if (current()//ancestor::t:binding) then 'BIND' else ()"/><xsl:value-of select="name()"/></xsl:with-param>
             </xsl:call-template>
         </xsl:variable>
-        
+
         <rdf:Description>
             <xsl:variable name="elemname" select="name()"/>
             <xsl:variable name="id" select="if(@xml:id) then @xml:id else concat(name(), (count(preceding-sibling::t:*[name() = $elemname])+1))"/>
-            
+
             <xsl:attribute name="rdf:about">
                 <xsl:value-of select="concat('https://betamasaheft.eu/', $mainID, '/', $type, '/', $id)"/>
             </xsl:attribute>
@@ -693,7 +693,7 @@
             <xsl:if test="$type = 'layout'">
 <!--                a layout note will always be also a UniMeP. The encoder will have for visible distinctions have encoded different layout elements-->
                 <rdf:type rdf:resource="https://w3id.org/sdc/ontology#UniMeP"/>
-                
+
                 <xsl:apply-templates select="descendant::t:objectDesc//t:rs[@type='execution']"/>
             </xsl:if>
             <xsl:if test="$type = 'hand'">
@@ -738,14 +738,14 @@
             </xsl:apply-templates>
         </rdf:Description>
 <!--        in case div has got subdivs, then loop again-->
-        
+
         <xsl:apply-templates select="t:div" mode="parturis">
             <xsl:with-param name="mainID">
                 <xsl:value-of select="$mainID"/>
             </xsl:with-param>
         </xsl:apply-templates>
     </xsl:template>
-    
+
     <xsl:template match="@corresp">
         <xsl:param name="mainID"/>
        <xsl:choose>
@@ -798,7 +798,7 @@
            </xsl:otherwise>
        </xsl:choose>
     </xsl:template>
-    
+
     <xsl:template name="URItype">
         <xsl:param name="name"/>
         <xsl:choose>
@@ -818,9 +818,9 @@
             <xsl:when test="$name = 'BINDdecoNote' ">binding</xsl:when>
         </xsl:choose>
     </xsl:template>
-    
+
     <xsl:template match="t:locus">
-<!--        to preserve EACH distinct locus, because there might be texts where an encoding is made as 
+<!--        to preserve EACH distinct locus, because there might be texts where an encoding is made as
         from <locus> to <locus> is given, to provide also lines, for example-->
         <bm:hasLocus>
             <bm:Locus>
@@ -865,7 +865,7 @@
     <xsl:apply-templates select="t:dimensions"/>
     <xsl:apply-templates select="t:locus"/>
 </xsl:template>
-    
+
     <xsl:template match="t:dimensions">
         <xsl:variable name="unit" select="@unit"/>
         <xsl:for-each select="child::t:*">
@@ -878,7 +878,7 @@
     </crm:P43_has_dimension>
         </xsl:for-each>
     </xsl:template>
-    
+
     <xsl:template name="newResource">
         <xsl:param name="thisid"/>
         <xsl:variable name="candidatenewsubid" select="substring-after($thisid, '#')"/>
@@ -921,7 +921,7 @@
             </rdf:type>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="t:relation[@active][@passive]">
         <xsl:variable name="a" select="@active"/>
         <xsl:variable name="about">
@@ -930,18 +930,18 @@
         <xsl:variable name="n" select="@name"/>
         <xsl:choose>
             <xsl:when test="contains(@passive, ' ')">
-                <rdf:Description rdf:about="{$about}"> 
+                <rdf:Description rdf:about="{$about}">
                     <xsl:if test="contains($a, '#')">
                     <xsl:call-template name="newResource">
                         <xsl:with-param name="thisid"><xsl:value-of select="$a"/></xsl:with-param>
-                    </xsl:call-template>    
+                    </xsl:call-template>
                     </xsl:if>
                     <xsl:for-each select="tokenize(normalize-space(@passive), ' ')">
-                    
+
                     <xsl:variable name="resource">
                         <xsl:value-of select="funct:id(.)"/>
                     </xsl:variable>
-                    
+
                        <xsl:choose>
                            <xsl:when test="starts-with($n, 'snap:')">
                                <snap:hasBond rdf:resource="https://betamasaheft.eu/bond/{$n}-{.}"/>
@@ -954,13 +954,13 @@
                                </xsl:element>
                            </xsl:otherwise>
                        </xsl:choose>
-                       
-                    
+
+
                 </xsl:for-each>
                 </rdf:Description>
             </xsl:when>
             <xsl:otherwise>
-                
+
                 <xsl:variable name="resource">
                     <xsl:value-of select="funct:id(@passive)"/>
                 </xsl:variable>
@@ -969,7 +969,7 @@
                     <xsl:if test="contains($a, '#')">
                     <xsl:call-template name="newResource">
                         <xsl:with-param name="thisid"><xsl:value-of select="$a"/></xsl:with-param>
-                    </xsl:call-template>    
+                    </xsl:call-template>
                 </xsl:if>
                     <xsl:choose>
                         <xsl:when test="starts-with($n, 'snap:')">
@@ -1001,7 +1001,7 @@
             </rdf:Description>
         </xsl:if>
     </xsl:template>
-    
+
     <xsl:template match="t:desc">
         <xsl:apply-templates select="t:locus"/>
         <xsl:apply-templates select="t:locus"/>
@@ -1014,8 +1014,8 @@
             </crm:P1_is_identified_by>
         </xsl:for-each>
     </xsl:template>
-    
-    
+
+
     <xsl:template match="t:listBibl[not(@type = 'clavis')]">
          <xsl:for-each select="t:bibl[t:ptr[@target]][t:citedRange/text()]">
              <dcterms:bibliographicCitation>
@@ -1058,7 +1058,7 @@
     <xsl:template match="t:objectType">
         <crm:P2_has_type rdf:resource="{@ref}"/>
     </xsl:template>
-    
+
     <xsl:template match="t:rs[@type='execution']">
         <crm:P32_used_general_technique rdf:resource="{@ref}"/>
     </xsl:template>
@@ -1259,7 +1259,7 @@
             <lawd:hasCitation><xsl:value-of select="$citation"/><xsl:text> </xsl:text><xsl:value-of select="$passage"/></lawd:hasCitation>
             </xsl:if>
             <xsl:if test="normalize-space(string-join(text(), '')) != ''"><lawd:hasName><xsl:value-of select="normalize-space(string-join(text(), ' '))"/></lawd:hasName></xsl:if>
-            
+
         </oa:Annotation>
     </xsl:template>
 
@@ -1299,7 +1299,7 @@
             </xsl:attribute>
         </dc:relation>
     </xsl:template>
-    
+
     <xsl:template match="t:title" mode="rel">
         <dc:relation>
             <xsl:attribute name="rdf:resource">
