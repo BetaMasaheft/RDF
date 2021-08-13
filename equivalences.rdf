@@ -47,4 +47,13 @@
     <rdf:Description rdf:about="https://betamasaheft.eu/nar">
         <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
     </rdf:Description>
+    <rdf:Description rdf:about="https://betamasaheft.eu/ontology/LexiconEntry">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalEntry"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://betamasaheft.eu/ontology/InLawOf"> 
+    <rdfs:subClassOf rdf:resource="http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship"/>
+    </rdf:Description>
+    
+    
+    
 </rdf:RDF>

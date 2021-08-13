@@ -96,7 +96,8 @@
     <!-- https://betamasaheft.eu/brotherInLawOf -->
 
     <owl:ObjectProperty rdf:about="https://betamasaheft.eu/brotherInLawOf">
-        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLowOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLawOf"/>
+        <rdfs:range rdf:resource="https://betamasaheft.eu/ontology/BrotherInLaw"/>
         <rdfs:comment xml:lang="en">is the brother of the legally conjugated partner</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -105,7 +106,8 @@
     <!-- https://betamasaheft.eu/daugtherInLawOf -->
 
     <owl:ObjectProperty rdf:about="https://betamasaheft.eu/daugtherInLawOf">
-        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLowOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLawOf"/>
+        <rdfs:range rdf:resource="https://betamasaheft.eu/ontology/DaughterInLaw"/>
         <rdfs:comment xml:lang="en">is the wife of the son</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -114,7 +116,8 @@
     <!-- https://betamasaheft.eu/fatherInLawOf -->
 
     <owl:ObjectProperty rdf:about="https://betamasaheft.eu/fatherInLawOf">
-        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLowOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLawOf"/>
+        <rdfs:range rdf:resource="https://betamasaheft.eu/ontology/FatherInLaw"/>
         <rdfs:comment xml:lang="en">is the father of the legally conjugated partner</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -220,9 +223,9 @@
     
 
 
-    <!-- https://betamasaheft.eu/isInLowOf -->
+    <!-- https://betamasaheft.eu/isInLawOf -->
 
-    <owl:ObjectProperty rdf:about="https://betamasaheft.eu/isInLowOf">
+    <owl:ObjectProperty rdf:about="https://betamasaheft.eu/isInLawOf">
         <rdfs:domain rdf:resource="https://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="https://betamasaheft.eu/pers"/>
         <rdfs:comment xml:lang="en">in law relationships between persons</rdfs:comment>
@@ -253,7 +256,8 @@
     <!-- https://betamasaheft.eu/motherInLawOf -->
 
     <owl:ObjectProperty rdf:about="https://betamasaheft.eu/motherInLawOf">
-        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLowOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLawOf"/>
+        <rdfs:range rdf:resource="https://betamasaheft.eu/ontology/MotherInLaw"/>
         <rdfs:comment xml:lang="en">is the mother of the legally conjugated partner</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -281,7 +285,8 @@
     <!-- https://betamasaheft.eu/sisterInLawOf -->
 
     <owl:ObjectProperty rdf:about="https://betamasaheft.eu/sisterInLawOf">
-        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLowOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLawOf"/>
+        <rdfs:range rdf:resource="https://betamasaheft.eu/ontology/SisterInLaw"/>
         <rdfs:comment xml:lang="en">is the sister of the legally conjugated partner</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -290,7 +295,8 @@
     <!-- https://betamasaheft.eu/sonInLawOf -->
 
     <owl:ObjectProperty rdf:about="https://betamasaheft.eu/sonInLawOf">
-        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLowOf"/>
+        <rdfs:subPropertyOf rdf:resource="https://betamasaheft.eu/isInLawOf"/>
+        <rdfs:range rdf:resource="https://betamasaheft.eu/ontology/SonInLaw"/>
         <rdfs:comment xml:lang="en">is the husband of the daugther</rdfs:comment>
     </owl:ObjectProperty>
     
@@ -3595,9 +3601,41 @@
     
 
 
+    <!-- https://betamasaheft.eu/ontology/BrotherInLaw -->
+
+    <owl:Class rdf:about="https://betamasaheft.eu/ontology/BrotherInLaw">
+        <rdfs:subClassOf rdf:resource="https://betamasaheft.eu/ontology/InLawOf"/>
+    </owl:Class>
+    
+
+
+    <!-- https://betamasaheft.eu/ontology/DaughterInLaw -->
+
+    <owl:Class rdf:about="https://betamasaheft.eu/ontology/DaughterInLaw">
+        <rdfs:subClassOf rdf:resource="https://betamasaheft.eu/ontology/InLawOf"/>
+    </owl:Class>
+    
+
+
     <!-- https://betamasaheft.eu/ontology/Entities -->
 
     <owl:Class rdf:about="https://betamasaheft.eu/ontology/Entities"/>
+    
+
+
+    <!-- https://betamasaheft.eu/ontology/FatherInLaw -->
+
+    <owl:Class rdf:about="https://betamasaheft.eu/ontology/FatherInLaw">
+        <rdfs:subClassOf rdf:resource="https://betamasaheft.eu/ontology/InLawOf"/>
+    </owl:Class>
+    
+
+
+    <!-- https://betamasaheft.eu/ontology/InLawOf -->
+
+    <owl:Class rdf:about="https://betamasaheft.eu/ontology/InLawOf">
+        <rdfs:subClassOf rdf:resource="https://betamasaheft.eu/pers"/>
+    </owl:Class>
     
 
 
@@ -3605,6 +3643,30 @@
 
     <owl:Class rdf:about="https://betamasaheft.eu/ontology/LexiconEntry">
         <rdfs:subClassOf rdf:resource="https://betamasaheft.eu/ontology/Entities"/>
+    </owl:Class>
+    
+
+
+    <!-- https://betamasaheft.eu/ontology/MotherInLaw -->
+
+    <owl:Class rdf:about="https://betamasaheft.eu/ontology/MotherInLaw">
+        <rdfs:subClassOf rdf:resource="https://betamasaheft.eu/ontology/InLawOf"/>
+    </owl:Class>
+    
+
+
+    <!-- https://betamasaheft.eu/ontology/SisterInLaw -->
+
+    <owl:Class rdf:about="https://betamasaheft.eu/ontology/SisterInLaw">
+        <rdfs:subClassOf rdf:resource="https://betamasaheft.eu/ontology/InLawOf"/>
+    </owl:Class>
+    
+
+
+    <!-- https://betamasaheft.eu/ontology/SonInLaw -->
+
+    <owl:Class rdf:about="https://betamasaheft.eu/ontology/SonInLaw">
+        <rdfs:subClassOf rdf:resource="https://betamasaheft.eu/ontology/InLawOf"/>
     </owl:Class>
     
 
@@ -3662,6 +3724,17 @@
             <rdf:Description rdf:about="https://betamasaheft.eu/stone"/>
             <rdf:Description rdf:about="https://betamasaheft.eu/textile"/>
             <rdf:Description rdf:about="https://betamasaheft.eu/wood"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://betamasaheft.eu/ontology/BrotherInLaw"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/ontology/DaughterInLaw"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/ontology/FatherInLaw"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/ontology/MotherInLaw"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/ontology/SisterInLaw"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/ontology/SonInLaw"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
