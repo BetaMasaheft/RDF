@@ -76,7 +76,6 @@
     <!-- http://syriaca.org/documentation/relations.html#has-relation-to-place -->
 
     <owl:ObjectProperty rdf:about="http://syriaca.org/documentation/relations.html#has-relation-to-place">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="https://betamasaheft.eu/Place"/>
     </owl:ObjectProperty>
@@ -142,7 +141,6 @@
     <!-- https://betamasaheft.eu/hasLocus -->
 
     <owl:ObjectProperty rdf:about="https://betamasaheft.eu/hasLocus">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://betamasaheft.eu/Documents"/>
         <rdfs:domain rdf:resource="https://betamasaheft.eu/MScomponents"/>
         <rdfs:range rdf:resource="https://betamasaheft.eu/Locus"/>
@@ -264,7 +262,6 @@
     <!-- https://betamasaheft.eu/ordainedBy -->
 
     <owl:ObjectProperty rdf:about="https://betamasaheft.eu/ordainedBy">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="https://betamasaheft.eu/pers"/>
         <rdfs:comment xml:lang="en">Ordained priest, bishop or monk. Same as Consecrated.</rdfs:comment>
@@ -275,7 +272,6 @@
     <!-- https://betamasaheft.eu/roleType -->
 
     <owl:ObjectProperty rdf:about="https://betamasaheft.eu/roleType">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://betamasaheft.eu/Role"/>
         <rdfs:range rdf:resource="https://betamasaheft.eu/Occupation"/>
     </owl:ObjectProperty>
@@ -303,7 +299,6 @@
     <!-- https://betamasaheft.eu/wifeOf -->
 
     <owl:ObjectProperty rdf:about="https://betamasaheft.eu/wifeOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="https://betamasaheft.eu/pers"/>
         <rdfs:range rdf:resource="https://betamasaheft.eu/pers"/>
         <rdfs:comment xml:lang="en">subject is the wife of object</rdfs:comment>

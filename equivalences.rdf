@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xml:lang="en"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:bm="https://betamasaheft.eu/"
+    >
+    
+    
+    <!-- saws equivalences. referred to the local saws.rdf, where some of the differences between
+    https://ancientwisdoms.ac.uk/media/ontology/doc/index.html and
+    https://ancientwisdoms.ac.uk/media/ontology/SAWS_relationship_types.html
+    and the online available v.2 of the ontology https://ancientwisdoms.ac.uk/media/ontology/sawsOntologyV2.0.owl.xml
+    have been reconciled with our usage (based on the documentation, first link) 
+    https://betamasaheft.eu/Guidelines/?id=relations
+    -->
+    <rdf:Description rdf:about="https://betamasaheft.eu/ontology/hasLocus">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/saws/ontology#isLocatedAt"/>
+    </rdf:Description>
+    
+    
+<!--    lawd equivalences -->
+    <rdf:Description rdf:about="https://betamasaheft.eu/work">
+        <rdfs:subClassOf rdf:resource="http://lawd.info/ontology/Edition"/>
+        <rdfs:subClassOf rdf:resource="http://lawd.info/ontology/ConceptualWork"/>
+<!--    do we actually need this, since lawd already aligns to CIDOC, and so do SAWS and SNAP?
+            <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>-->
+    </rdf:Description>
+    <rdf:Description rdf:about="https://betamasaheft.eu/mss">
+        <rdfs:subClassOf rdf:resource="http://lawd.info/ontology/AssembledWork"/>
+        <!-- we need this because we use crm:P57_has_number_of_parts, a data property with Domain E19 Physical Object, which is a superClass of E22-->
+          <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E22_Man_Made_Object"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="https://betamasaheft.eu/place">
+        <rdfs:subClassOf rdf:resource="http://lawd.info/ontology/Place"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://betamasaheft.eu/ins">
+        <rdfs:subClassOf rdf:resource="http://lawd.info/ontology/Place"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E29_Actor"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://betamasaheft.eu/pers">
+        <rdfs:subClassOf rdf:resource="http://lawd.info/ontology/Person"/>
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E29_Actor"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://betamasaheft.eu/nar">
+        <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object"/>
+    </rdf:Description>
+</rdf:RDF>
