@@ -321,6 +321,22 @@
     
 
 
+    <!-- https://betamasaheft.eu/ontology/isProseVersionOf -->
+
+    <owl:ObjectProperty rdf:about="https://betamasaheft.eu/ontology/isProseVersionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://betamasaheft.eu/ontology/isVerseVersionOf -->
+
+    <owl:ObjectProperty rdf:about="https://betamasaheft.eu/ontology/isVerseVersionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -3735,6 +3751,45 @@
             <rdf:Description rdf:about="https://betamasaheft.eu/ontology/MotherInLaw"/>
             <rdf:Description rdf:about="https://betamasaheft.eu/ontology/SisterInLaw"/>
             <rdf:Description rdf:about="https://betamasaheft.eu/ontology/SonInLaw"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://syriaca.org/documentation/relations.html#has-relation-to-place"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/baptizedBy"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/hasBaptized"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/hasLexiconEntry"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/hasLocus"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/hasOrdained"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/hasRole"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/hasTabot"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/hasTotalLeaves"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/husbandOf"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/isAuthorOfEthiopicTranslation"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/isGoldenGospelof"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/isInLawOf"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/isPredecessorOf"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/isSuccessorOf"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/ordainedBy"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/roleType"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/wifeOf"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/ontology/formerlyAlsoListedAs"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/ontology/isProseVersionOf"/>
+            <rdf:Description rdf:about="https://betamasaheft.eu/ontology/isVerseVersionOf"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#belongsTo"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#constituteUnit"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#containsUnits"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#hasCertainty"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#hasStratum"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#hasTransformationModel"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#hasTransformationPart"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#hasUnitModel"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#isPartOfTransformation"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#isStratumOf"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#produces"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#resultsIn"/>
+            <rdf:Description rdf:about="https://w3id.org/sdc/ontology#undergoesTransformation"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

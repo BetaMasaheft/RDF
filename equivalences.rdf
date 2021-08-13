@@ -54,6 +54,13 @@
     <rdfs:subClassOf rdf:resource="http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship"/>
     </rdf:Description>
     
+    <rdf:Description rdf:about="https://betamasaheft.eu/ontology/isProseVersionOf"> 
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/saws/ontology#isVersionOf"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://betamasaheft.eu/ontology/isVerseVersionOf"> 
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/saws/ontology#isVersionOf"/>
+    </rdf:Description>
+    
     
     
 </rdf:RDF>
